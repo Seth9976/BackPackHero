@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89330582-DC56-498E-B3FB-62A818BB40CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.Timeline</RootNamespace>
+    <AssemblyName>Unity.Timeline</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationControlPlayable.cs" />
+    <Compile Include="ActivationMixerPlayable.cs" />
+    <Compile Include="ActivationPlayableAsset.cs" />
+    <Compile Include="ActivationTrack.cs" />
+    <Compile Include="AnimationOutputWeightProcessor.cs" />
+    <Compile Include="AnimationPlayableAsset.cs" />
+    <Compile Include="AnimationPreviewUpdateCallback.cs" />
+    <Compile Include="AnimationTrack.cs" />
+    <Compile Include="AppliedOffsetMode.cs" />
+    <Compile Include="AudioClipProperties.cs" />
+    <Compile Include="AudioMixerProperties.cs" />
+    <Compile Include="AudioPlayableAsset.cs" />
+    <Compile Include="AudioTrack.cs" />
+    <Compile Include="BasicPlayableBehaviour.cs" />
+    <Compile Include="ClipCaps.cs" />
+    <Compile Include="ControlPlayableAsset.cs" />
+    <Compile Include="ControlTrack.cs" />
+    <Compile Include="CustomSignalEventDrawer.cs" />
+    <Compile Include="CustomStyleAttribute.cs" />
+    <Compile Include="DirectorControlPlayable.cs" />
+    <Compile Include="DiscreteTime.cs" />
+    <Compile Include="Extrapolation.cs" />
+    <Compile Include="FrameRateFieldAttribute.cs" />
+    <Compile Include="GroupTrack.cs" />
+    <Compile Include="HashUtility.cs" />
+    <Compile Include="HideInMenuAttribute.cs" />
+    <Compile Include="ICurvesOwner.cs" />
+    <Compile Include="IgnoreOnPlayableTrackAttribute.cs" />
+    <Compile Include="IInterval.cs" />
+    <Compile Include="ILayerable.cs" />
+    <Compile Include="IMarker.cs" />
+    <Compile Include="InfiniteRuntimeClip.cs" />
+    <Compile Include="INotificationOptionProvider.cs" />
+    <Compile Include="IntervalTree.cs" />
+    <Compile Include="IntervalTreeNode.cs" />
+    <Compile Include="IPropertyCollector.cs" />
+    <Compile Include="IPropertyPreview.cs" />
+    <Compile Include="ITimeControl.cs" />
+    <Compile Include="ITimelineClipAsset.cs" />
+    <Compile Include="ITimelineEvaluateCallback.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="MarkerList.cs" />
+    <Compile Include="MarkerTrack.cs" />
+    <Compile Include="MatchTargetFieldConstants.cs" />
+    <Compile Include="MatchTargetFields.cs" />
+    <Compile Include="MenuCategoryAttribute.cs" />
+    <Compile Include="NotificationFlags.cs" />
+    <Compile Include="NotificationUtilities.cs" />
+    <Compile Include="NotKeyableAttribute.cs" />
+    <Compile Include="ParticleControlPlayable.cs" />
+    <Compile Include="PlayableTrack.cs" />
+    <Compile Include="PrefabControlPlayable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuntimeClip.cs" />
+    <Compile Include="RuntimeClipBase.cs" />
+    <Compile Include="RuntimeElement.cs" />
+    <Compile Include="ScheduleRuntimeClip.cs" />
+    <Compile Include="SignalAsset.cs" />
+    <Compile Include="SignalEmitter.cs" />
+    <Compile Include="SignalReceiver.cs" />
+    <Compile Include="SignalTrack.cs" />
+    <Compile Include="StandardFrameRates.cs" />
+    <Compile Include="SupportsChildTracksAttribute.cs" />
+    <Compile Include="TimeControlPlayable.cs" />
+    <Compile Include="TimeFieldAttribute.cs" />
+    <Compile Include="TimelineAsset.cs" />
+    <Compile Include="TimelineClip.cs" />
+    <Compile Include="TimelineClipCapsExtensions.cs" />
+    <Compile Include="TimelineClipExtensions.cs" />
+    <Compile Include="TimelineCreateUtilities.cs" />
+    <Compile Include="TimelineHelpURLAttribute.cs" />
+    <Compile Include="TimelinePlayable.cs" />
+    <Compile Include="TimelineUndo.cs" />
+    <Compile Include="TimeNotificationBehaviour.cs" />
+    <Compile Include="TimeUtility.cs" />
+    <Compile Include="TrackAsset.cs" />
+    <Compile Include="TrackAssetExtensions.cs" />
+    <Compile Include="TrackBindingFlags.cs" />
+    <Compile Include="TrackBindingTypeAttribute.cs" />
+    <Compile Include="TrackClipTypeAttribute.cs" />
+    <Compile Include="TrackColorAttribute.cs" />
+    <Compile Include="TrackMediaType.cs" />
+    <Compile Include="TrackOffset.cs" />
+    <Compile Include="WeightUtility.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

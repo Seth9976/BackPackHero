@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91E0376C-32D3-4135-BEC7-A7035A985694}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.XRModule</RootNamespace>
+    <AssemblyName>UnityEngine.XRModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="UnityEngine\XR\AvailableTrackingData.cs" />
+    <Compile Include="UnityEngine\XR\Bone.cs" />
+    <Compile Include="UnityEngine\XR\CommonUsages.cs" />
+    <Compile Include="UnityEngine\XR\ConnectionChangeType.cs" />
+    <Compile Include="UnityEngine\XR\Eyes.cs" />
+    <Compile Include="UnityEngine\XR\EyeSide.cs" />
+    <Compile Include="UnityEngine\XR\Hand.cs" />
+    <Compile Include="UnityEngine\XR\HandFinger.cs" />
+    <Compile Include="UnityEngine\XR\HapticCapabilities.cs" />
+    <Compile Include="UnityEngine\XR\HashCodeHelper.cs" />
+    <Compile Include="UnityEngine\XR\InputDevice.cs" />
+    <Compile Include="UnityEngine\XR\InputDeviceCharacteristics.cs" />
+    <Compile Include="UnityEngine\XR\InputDeviceRole.cs" />
+    <Compile Include="UnityEngine\XR\InputDevices.cs" />
+    <Compile Include="UnityEngine\XR\InputFeatureType.cs" />
+    <Compile Include="UnityEngine\XR\InputFeatureUsage.2.cs" />
+    <Compile Include="UnityEngine\XR\InputFeatureUsage.cs" />
+    <Compile Include="UnityEngine\XR\InputTracking.cs" />
+    <Compile Include="UnityEngine\XR\InputTrackingState.cs" />
+    <Compile Include="UnityEngine\XR\MeshChangeState.cs" />
+    <Compile Include="UnityEngine\XR\MeshGenerationOptions.cs" />
+    <Compile Include="UnityEngine\XR\MeshGenerationResult.cs" />
+    <Compile Include="UnityEngine\XR\MeshGenerationStatus.cs" />
+    <Compile Include="UnityEngine\XR\MeshId.cs" />
+    <Compile Include="UnityEngine\XR\MeshInfo.cs" />
+    <Compile Include="UnityEngine\XR\MeshTransform.cs" />
+    <Compile Include="UnityEngine\XR\MeshVertexAttributes.cs" />
+    <Compile Include="UnityEngine\XR\Provider\XRStats.cs" />
+    <Compile Include="UnityEngine\XR\TimeConverter.cs" />
+    <Compile Include="UnityEngine\XR\TrackingOriginModeFlags.cs" />
+    <Compile Include="UnityEngine\XR\XRDisplaySubsystem.cs" />
+    <Compile Include="UnityEngine\XR\XRDisplaySubsystemDescriptor.cs" />
+    <Compile Include="UnityEngine\XR\XRInputSubsystem.cs" />
+    <Compile Include="UnityEngine\XR\XRInputSubsystemDescriptor.cs" />
+    <Compile Include="UnityEngine\XR\XRMeshSubsystem.cs" />
+    <Compile Include="UnityEngine\XR\XRMeshSubsystemDescriptor.cs" />
+    <Compile Include="UnityEngine\XR\XRMirrorViewBlitMode.cs" />
+    <Compile Include="UnityEngine\XR\XRMirrorViewBlitModeDesc.cs" />
+    <Compile Include="UnityEngine\XR\XRNode.cs" />
+    <Compile Include="UnityEngine\XR\XRNodeState.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

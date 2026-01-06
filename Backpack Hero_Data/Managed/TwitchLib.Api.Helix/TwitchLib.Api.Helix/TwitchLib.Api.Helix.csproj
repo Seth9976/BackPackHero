@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA7EFB82-FCD4-4182-BB2F-9069D2A055D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.Api.Helix</RootNamespace>
+    <AssemblyName>TwitchLib.Api.Helix</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="TwitchLib.Api.Core">
+      <HintPath>..\..\TwitchLib.Api.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Core.Enums">
+      <HintPath>..\..\TwitchLib.Api.Core.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Core.Interfaces">
+      <HintPath>..\..\TwitchLib.Api.Core.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Helix.Models">
+      <HintPath>..\..\TwitchLib.Api.Helix.Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ads.cs" />
+    <Compile Include="Analytics.cs" />
+    <Compile Include="Bits.cs" />
+    <Compile Include="ChannelPoints.cs" />
+    <Compile Include="Channels.cs" />
+    <Compile Include="Charity.cs" />
+    <Compile Include="Chat.cs" />
+    <Compile Include="Clips.cs" />
+    <Compile Include="Entitlements.cs" />
+    <Compile Include="EventSub.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Games.cs" />
+    <Compile Include="Goals.cs" />
+    <Compile Include="Helix.cs" />
+    <Compile Include="HypeTrain.cs" />
+    <Compile Include="Moderation.cs" />
+    <Compile Include="Polls.cs" />
+    <Compile Include="Predictions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raids.cs" />
+    <Compile Include="Schedule.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="Soundtrack.cs" />
+    <Compile Include="Streams.cs" />
+    <Compile Include="Subscriptions.cs" />
+    <Compile Include="Tags.cs" />
+    <Compile Include="Teams.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="Videos.cs" />
+    <Compile Include="Whispers.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace Galaxy.Api
+{
+	// Token: 0x0200018E RID: 398
+	public enum LeaderboardDisplayType
+	{
+		// Token: 0x0400030B RID: 779
+		LEADERBOARD_DISPLAY_TYPE_NONE,
+		// Token: 0x0400030C RID: 780
+		LEADERBOARD_DISPLAY_TYPE_NUMBER,
+		// Token: 0x0400030D RID: 781
+		LEADERBOARD_DISPLAY_TYPE_TIME_SECONDS,
+		// Token: 0x0400030E RID: 782
+		LEADERBOARD_DISPLAY_TYPE_TIME_MILLISECONDS
+	}
+}

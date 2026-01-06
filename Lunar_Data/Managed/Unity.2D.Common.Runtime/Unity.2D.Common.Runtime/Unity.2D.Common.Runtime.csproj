@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D18870CA-CE79-4B0C-B445-5318399BED76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.U2D.Common.UTess</RootNamespace>
+    <AssemblyName>Unity.2D.Common.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Array.cs" />
+    <Compile Include="ArrayDebugView.cs" />
+    <Compile Include="ArraySlice.cs" />
+    <Compile Include="ArraySliceDebugView.cs" />
+    <Compile Include="DelaEdgeCompare.cs" />
+    <Compile Include="ICondition2.cs" />
+    <Compile Include="IntersectionCompare.cs" />
+    <Compile Include="ModuleHandle.cs" />
+    <Compile Include="PlanarGraph.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refinery.cs" />
+    <Compile Include="Smoothen.cs" />
+    <Compile Include="TessCellCompare.cs" />
+    <Compile Include="TessEdgeCompare.cs" />
+    <Compile Include="Tessellator.cs" />
+    <Compile Include="TessEventCompare.cs" />
+    <Compile Include="TessJunctionCompare.cs" />
+    <Compile Include="TessLink.cs" />
+    <Compile Include="UBounds.cs" />
+    <Compile Include="UCircle.cs" />
+    <Compile Include="UEncroachingSegment.cs" />
+    <Compile Include="UEvent.cs" />
+    <Compile Include="UEventType.cs" />
+    <Compile Include="UHull.cs" />
+    <Compile Include="UStar.cs" />
+    <Compile Include="UTriangle.cs" />
+    <Compile Include="XCompare.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

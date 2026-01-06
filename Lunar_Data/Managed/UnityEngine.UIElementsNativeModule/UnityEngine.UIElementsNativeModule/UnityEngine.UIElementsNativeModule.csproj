@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABD304E9-3F93-4C17-8610-5CBF9630249C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine</RootNamespace>
+    <AssemblyName>UnityEngine.UIElementsNativeModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIElements\ImmediateStylePainter.cs" />
+    <Compile Include="UIElements\TextNative.cs" />
+    <Compile Include="UIElements\TextNativeSettings.cs" />
+    <Compile Include="UIElements\TextVertex.cs" />
+    <Compile Include="UIElements\UIElementsRuntimeUtilityNative.cs" />
+    <Compile Include="UIElements\UIR\DrawBufferRange.cs" />
+    <Compile Include="UIElements\UIR\GfxUpdateBufferRange.cs" />
+    <Compile Include="UIElements\UIR\Utility.cs" />
+    <Compile Include="Yoga\BaselineFunction.cs" />
+    <Compile Include="Yoga\Logger.cs" />
+    <Compile Include="Yoga\MeasureFunction.cs" />
+    <Compile Include="Yoga\MeasureOutput.cs" />
+    <Compile Include="Yoga\Native.cs" />
+    <Compile Include="Yoga\YogaAlign.cs" />
+    <Compile Include="Yoga\YogaBaselineFunc.cs" />
+    <Compile Include="Yoga\YogaConfig.cs" />
+    <Compile Include="Yoga\YogaConstants.cs" />
+    <Compile Include="Yoga\YogaDimension.cs" />
+    <Compile Include="Yoga\YogaDirection.cs" />
+    <Compile Include="Yoga\YogaDisplay.cs" />
+    <Compile Include="Yoga\YogaEdge.cs" />
+    <Compile Include="Yoga\YogaExperimentalFeature.cs" />
+    <Compile Include="Yoga\YogaFlexDirection.cs" />
+    <Compile Include="Yoga\YogaJustify.cs" />
+    <Compile Include="Yoga\YogaLogger.cs" />
+    <Compile Include="Yoga\YogaLogLevel.cs" />
+    <Compile Include="Yoga\YogaMeasureFunc.cs" />
+    <Compile Include="Yoga\YogaMeasureMode.cs" />
+    <Compile Include="Yoga\YogaNode.cs" />
+    <Compile Include="Yoga\YogaNodeType.cs" />
+    <Compile Include="Yoga\YogaOverflow.cs" />
+    <Compile Include="Yoga\YogaPositionType.cs" />
+    <Compile Include="Yoga\YogaPrintOptions.cs" />
+    <Compile Include="Yoga\YogaSize.cs" />
+    <Compile Include="Yoga\YogaUnit.cs" />
+    <Compile Include="Yoga\YogaValue.cs" />
+    <Compile Include="Yoga\YogaValueExtensions.cs" />
+    <Compile Include="Yoga\YogaWrap.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

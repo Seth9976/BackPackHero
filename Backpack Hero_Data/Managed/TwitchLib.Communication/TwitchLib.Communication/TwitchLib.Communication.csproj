@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13AA1537-8CD8-4C64-8F48-E68191D7F758}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.Communication</RootNamespace>
+    <AssemblyName>TwitchLib.Communication</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clients\TcpClient.cs" />
+    <Compile Include="Clients\WebSocketClient.cs" />
+    <Compile Include="Enums\ClientType.cs" />
+    <Compile Include="Events\OnConnectedEventArgs.cs" />
+    <Compile Include="Events\OnDataEventArgs.cs" />
+    <Compile Include="Events\OnDisconnectedEventArgs.cs" />
+    <Compile Include="Events\OnErrorEventArgs.cs" />
+    <Compile Include="Events\OnFatalErrorEventArgs.cs" />
+    <Compile Include="Events\OnMessageEventArgs.cs" />
+    <Compile Include="Events\OnMessageThrottledEventArgs.cs" />
+    <Compile Include="Events\OnReconnectedEventArgs.cs" />
+    <Compile Include="Events\OnSendFailedEventArgs.cs" />
+    <Compile Include="Events\OnStateChangedEventArgs.cs" />
+    <Compile Include="Events\OnWhisperThrottledEventArgs.cs" />
+    <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Interfaces\IClientOptions.cs" />
+    <Compile Include="Models\ClientOptions.cs" />
+    <Compile Include="Models\ReconnectionPolicy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Throttlers.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

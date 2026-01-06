@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2954A2D-1556-4953-9A32-45E3E4398C49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.Client</RootNamespace>
+    <AssemblyName>TwitchLib.Client</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="TwitchLib.Client.Enums">
+      <HintPath>..\..\TwitchLib.Client.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Client.Models">
+      <HintPath>..\..\TwitchLib.Client.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Communication" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\OnAnnouncementArgs.cs" />
+    <Compile Include="Events\OnBadHostErrorArgs.cs" />
+    <Compile Include="Events\OnBadHostRateExceededArgs.cs" />
+    <Compile Include="Events\OnBadUnhostErrorArgs.cs" />
+    <Compile Include="Events\OnBannedArgs.cs" />
+    <Compile Include="Events\OnBannedEmailAliasArgs.cs" />
+    <Compile Include="Events\OnChannelStateChangedArgs.cs" />
+    <Compile Include="Events\OnChatClearedArgs.cs" />
+    <Compile Include="Events\OnChatColorChangedArgs.cs" />
+    <Compile Include="Events\OnChatCommandReceivedArgs.cs" />
+    <Compile Include="Events\OnCommunitySubscriptionArgs.cs" />
+    <Compile Include="Events\OnConnectedArgs.cs" />
+    <Compile Include="Events\OnConnectionErrorArgs.cs" />
+    <Compile Include="Events\OnContinuedGiftedSubscriptionArgs.cs" />
+    <Compile Include="Events\OnDisconnectedArgs.cs" />
+    <Compile Include="Events\OnDuplicateArgs.cs" />
+    <Compile Include="Events\OnEmoteOnlyArgs.cs" />
+    <Compile Include="Events\OnExistingUsersDetectedArgs.cs" />
+    <Compile Include="Events\OnFailureToReceiveJoinConfirmationArgs.cs" />
+    <Compile Include="Events\OnFollowersOnlyArgs.cs" />
+    <Compile Include="Events\OnGiftedSubscriptionArgs.cs" />
+    <Compile Include="Events\OnIncorrectLoginArgs.cs" />
+    <Compile Include="Events\OnJoinedChannelArgs.cs" />
+    <Compile Include="Events\OnLeftChannelArgs.cs" />
+    <Compile Include="Events\OnLogArgs.cs" />
+    <Compile Include="Events\OnMessageClearedArgs.cs" />
+    <Compile Include="Events\OnMessageReceivedArgs.cs" />
+    <Compile Include="Events\OnMessageSentArgs.cs" />
+    <Compile Include="Events\OnModeratorJoinedArgs.cs" />
+    <Compile Include="Events\OnModeratorLeftArgs.cs" />
+    <Compile Include="Events\OnModeratorsReceivedArgs.cs" />
+    <Compile Include="Events\OnNewSubscriberArgs.cs" />
+    <Compile Include="Events\OnNowHostingArgs.cs" />
+    <Compile Include="Events\OnPrimePaidSubscriberArgs.cs" />
+    <Compile Include="Events\OnR9kModeArgs.cs" />
+    <Compile Include="Events\OnRaidNotificationArgs.cs" />
+    <Compile Include="Events\OnRateLimitArgs.cs" />
+    <Compile Include="Events\OnRequiresVerifiedEmailArgs.cs" />
+    <Compile Include="Events\OnRequiresVerifiedPhoneNumberArgs.cs" />
+    <Compile Include="Events\OnReSubscriberArgs.cs" />
+    <Compile Include="Events\OnSendReceiveDataArgs.cs" />
+    <Compile Include="Events\OnSlowModeArgs.cs" />
+    <Compile Include="Events\OnSubsOnlyArgs.cs" />
+    <Compile Include="Events\OnSuspendedArgs.cs" />
+    <Compile Include="Events\OnUnaccountedForArgs.cs" />
+    <Compile Include="Events\OnUserBannedArgs.cs" />
+    <Compile Include="Events\OnUserIntroArgs.cs" />
+    <Compile Include="Events\OnUserJoinedArgs.cs" />
+    <Compile Include="Events\OnUserLeftArgs.cs" />
+    <Compile Include="Events\OnUserStateChangedArgs.cs" />
+    <Compile Include="Events\OnUserTimedoutArgs.cs" />
+    <Compile Include="Events\OnVIPsReceivedArgs.cs" />
+    <Compile Include="Events\OnWhisperCommandReceivedArgs.cs" />
+    <Compile Include="Events\OnWhisperReceivedArgs.cs" />
+    <Compile Include="Events\OnWhisperSentArgs.cs" />
+    <Compile Include="Exceptions\BadListenException.cs" />
+    <Compile Include="Exceptions\BadStateException.cs" />
+    <Compile Include="Exceptions\ClientNotConnectedException.cs" />
+    <Compile Include="Exceptions\ClientNotInitializedException.cs" />
+    <Compile Include="Exceptions\ErrorLoggingInException.cs" />
+    <Compile Include="Exceptions\EventNotHandled.cs" />
+    <Compile Include="Exceptions\FailureToReceiveJoinConfirmationException.cs" />
+    <Compile Include="Exceptions\IllegalAssignmentException.cs" />
+    <Compile Include="Exceptions\InvalidParameterException.cs" />
+    <Compile Include="Extensions\AnnoucementExt.cs" />
+    <Compile Include="Extensions\BanUserExt.cs" />
+    <Compile Include="Extensions\ChangeChatColorExt.cs" />
+    <Compile Include="Extensions\ClearChatExt.cs" />
+    <Compile Include="Extensions\CommercialExt.cs" />
+    <Compile Include="Extensions\DeleteMessageExt.cs" />
+    <Compile Include="Extensions\EmoteOnlyExt.cs" />
+    <Compile Include="Extensions\EventInvocationExt.cs" />
+    <Compile Include="Extensions\FollowersOnlyExt.cs" />
+    <Compile Include="Extensions\GetChannelModeratorsExt.cs" />
+    <Compile Include="Extensions\MarkerExt.cs" />
+    <Compile Include="Extensions\ModExt.cs" />
+    <Compile Include="Extensions\RaidExt.cs" />
+    <Compile Include="Extensions\ReplyWhisperExt.cs" />
+    <Compile Include="Extensions\SlowModeExt.cs" />
+    <Compile Include="Extensions\SubscribersOnly.cs" />
+    <Compile Include="Extensions\TimeoutUserExt.cs" />
+    <Compile Include="Extensions\UnbanUserExt.cs" />
+    <Compile Include="Extensions\VIPExt.cs" />
+    <Compile Include="Interfaces\ITwitchClient.cs" />
+    <Compile Include="Internal\Parsing\IrcParser.cs" />
+    <Compile Include="Internal\Rfc2812.cs" />
+    <Compile Include="Manager\JoinedChannelManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwitchClient.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

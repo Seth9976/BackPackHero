@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59762044-EF7A-49B2-ABA6-DE2D719C95A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.Services.Core.Telemetry</RootNamespace>
+    <AssemblyName>Unity.Services.Core.Telemetry</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Internal\CachedPayload.cs" />
+    <Compile Include="Internal\CacheExtensions.cs" />
+    <Compile Include="Internal\Diagnostic.cs" />
+    <Compile Include="Internal\Diagnostics.cs" />
+    <Compile Include="Internal\DiagnosticsFactory.cs" />
+    <Compile Include="Internal\DiagnosticsHandler.cs" />
+    <Compile Include="Internal\DiagnosticsPayload.cs" />
+    <Compile Include="Internal\DisabledCachePersister.cs" />
+    <Compile Include="Internal\DisabledDiagnostics.cs" />
+    <Compile Include="Internal\DisabledDiagnosticsFactory.cs" />
+    <Compile Include="Internal\DisabledMetrics.cs" />
+    <Compile Include="Internal\DisabledMetricsFactory.cs" />
+    <Compile Include="Internal\ExponentialBackOffRetryPolicy.cs" />
+    <Compile Include="Internal\FactoryUtils.cs" />
+    <Compile Include="Internal\FileCachePersister.2.cs" />
+    <Compile Include="Internal\FileCachePersister.cs" />
+    <Compile Include="Internal\ICachePersister.cs" />
+    <Compile Include="Internal\ITelemetryEvent.cs" />
+    <Compile Include="Internal\ITelemetryPayload.cs" />
+    <Compile Include="Internal\IUnityWebRequestSender.cs" />
+    <Compile Include="Internal\Metric.cs" />
+    <Compile Include="Internal\Metrics.cs" />
+    <Compile Include="Internal\MetricsFactory.cs" />
+    <Compile Include="Internal\MetricsHandler.cs" />
+    <Compile Include="Internal\MetricsPayload.cs" />
+    <Compile Include="Internal\MetricType.cs" />
+    <Compile Include="Internal\TagKeys.cs" />
+    <Compile Include="Internal\TelemetryConfig.cs" />
+    <Compile Include="Internal\TelemetryConfigKeys.cs" />
+    <Compile Include="Internal\TelemetryHandler.2.cs" />
+    <Compile Include="Internal\TelemetryHandler.cs" />
+    <Compile Include="Internal\TelemetrySender.cs" />
+    <Compile Include="Internal\TelemetryUtils.cs" />
+    <Compile Include="Internal\UnityWebRequestSender.cs" />
+    <Compile Include="Internal\WebRequest.cs" />
+    <Compile Include="Internal\WebRequestResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

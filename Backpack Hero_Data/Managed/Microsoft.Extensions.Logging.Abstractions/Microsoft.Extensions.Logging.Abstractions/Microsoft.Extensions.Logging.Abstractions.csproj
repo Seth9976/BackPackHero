@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5073234-331F-4FDA-A750-0BCF618EAA74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Extensions.Logging.Abstractions</RootNamespace>
+    <AssemblyName>Microsoft.Extensions.Logging.Abstractions</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FxResources\Microsoft\Extensions\Logging\Abstractions\SR.Designer.cs">
+      <DependentUpon>SR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Microsoft\Extensions\Internal\TypeNameHelper.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Abstractions\LogEntry.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Abstractions\NullLogger.2.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Abstractions\NullLogger.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Abstractions\NullLoggerFactory.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Abstractions\NullLoggerProvider.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\EventId.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\FormattedLogValues.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\IExternalScopeProvider.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\ILogger.2.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\ILogger.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\ILoggerFactory.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\ILoggerProvider.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\ISupportExternalScope.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\Logger.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LoggerExtensions.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LoggerExternalScopeProvider.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LoggerFactoryExtensions.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LoggerMessage.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LogLevel.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\LogValuesFormatter.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\NullExternalScopeProvider.cs" />
+    <Compile Include="Microsoft\Extensions\Logging\NullScope.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullablePublicOnlyAttribute.cs" />
+    <Compile Include="System\SR.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FxResources\Microsoft\Extensions\Logging\Abstractions\SR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ILLink.Substitutions.xml" />
+    <EmbeddedResource Include="Microsoft\Extensions\Logging\Abstractions\Resources\Strings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

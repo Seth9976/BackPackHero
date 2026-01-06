@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92FF7AEF-BFBA-4146-8132-24BA6E668F5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine</RootNamespace>
+    <AssemblyName>Unity.RenderPipelines.Universal.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>..\..\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Experimental\Rendering\Universal\PixelPerfectCamera.cs" />
+    <Compile Include="Experimental\Rendering\Universal\RenderObjects.cs" />
+    <Compile Include="Experimental\Rendering\Universal\RenderObjectsPass.cs" />
+    <Compile Include="Experimental\Rendering\Universal\RenderQueueType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendering\Universal\AntialiasingMode.cs" />
+    <Compile Include="Rendering\Universal\AntialiasingQuality.cs" />
+    <Compile Include="Rendering\Universal\Bloom.cs" />
+    <Compile Include="Rendering\Universal\CameraData.cs" />
+    <Compile Include="Rendering\Universal\CameraExtensions.cs" />
+    <Compile Include="Rendering\Universal\CameraOverrideOption.cs" />
+    <Compile Include="Rendering\Universal\CameraRenderType.cs" />
+    <Compile Include="Rendering\Universal\CameraTypeUtility.cs" />
+    <Compile Include="Rendering\Universal\CapturePass.cs" />
+    <Compile Include="Rendering\Universal\ChannelMixer.cs" />
+    <Compile Include="Rendering\Universal\ChromaticAberration.cs" />
+    <Compile Include="Rendering\Universal\CinemachineUniversalPixelPerfect.cs" />
+    <Compile Include="Rendering\Universal\Clipper.cs" />
+    <Compile Include="Rendering\Universal\ClipperBase.cs" />
+    <Compile Include="Rendering\Universal\ClipperException.cs" />
+    <Compile Include="Rendering\Universal\ClipperOffset.cs" />
+    <Compile Include="Rendering\Universal\ClipType.cs" />
+    <Compile Include="Rendering\Universal\ColorAdjustments.cs" />
+    <Compile Include="Rendering\Universal\ColorCurves.cs" />
+    <Compile Include="Rendering\Universal\ColorGradingMode.cs" />
+    <Compile Include="Rendering\Universal\ColorLookup.cs" />
+    <Compile Include="Rendering\Universal\ComponentUtility.cs" />
+    <Compile Include="Rendering\Universal\CompositeShadowCaster2D.cs" />
+    <Compile Include="Rendering\Universal\CopyDepthMode.cs" />
+    <Compile Include="Rendering\Universal\DBufferRenderPass.cs" />
+    <Compile Include="Rendering\Universal\DBufferSettings.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettings.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsCommon.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsLighting.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsMaterial.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsPanel.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsRendering.cs" />
+    <Compile Include="Rendering\Universal\DebugDisplaySettingsUI.cs" />
+    <Compile Include="Rendering\Universal\DebugHandler.cs" />
+    <Compile Include="Rendering\Universal\DebugRenderSetup.cs" />
+    <Compile Include="Rendering\Universal\DecalCachedChunk.cs" />
+    <Compile Include="Rendering\Universal\DecalChunk.cs" />
+    <Compile Include="Rendering\Universal\DecalCreateDrawCallSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalCulledChunk.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawCallChunk.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawDBufferSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawErrorSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawFowardEmissiveSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawGBufferSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawScreenSpaceSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalDrawSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalEntity.cs" />
+    <Compile Include="Rendering\Universal\DecalEntityChunk.cs" />
+    <Compile Include="Rendering\Universal\DecalEntityIndexer.cs" />
+    <Compile Include="Rendering\Universal\DecalEntityManager.cs" />
+    <Compile Include="Rendering\Universal\DecalForwardEmissivePass.cs" />
+    <Compile Include="Rendering\Universal\DecalGBufferRenderPass.cs" />
+    <Compile Include="Rendering\Universal\DecalNormalBlend.cs" />
+    <Compile Include="Rendering\Universal\DecalPreviewPass.cs" />
+    <Compile Include="Rendering\Universal\DecalProjector.cs" />
+    <Compile Include="Rendering\Universal\DecalRendererFeature.cs" />
+    <Compile Include="Rendering\Universal\DecalScaleMode.cs" />
+    <Compile Include="Rendering\Universal\DecalScreenSpaceRenderPass.cs" />
+    <Compile Include="Rendering\Universal\DecalScreenSpaceSettings.cs" />
+    <Compile Include="Rendering\Universal\DecalSettings.cs" />
+    <Compile Include="Rendering\Universal\DecalShaderPassNames.cs" />
+    <Compile Include="Rendering\Universal\DecalSkipCulledSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalSubDrawCall.cs" />
+    <Compile Include="Rendering\Universal\DecalSurfaceData.cs" />
+    <Compile Include="Rendering\Universal\DecalTechnique.cs" />
+    <Compile Include="Rendering\Universal\DecalTechniqueOption.cs" />
+    <Compile Include="Rendering\Universal\DecalUpdateCachedSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalUpdateCulledSystem.cs" />
+    <Compile Include="Rendering\Universal\DecalUpdateCullingGroupSystem.cs" />
+    <Compile Include="Rendering\Universal\DefaultMaterialType.cs" />
+    <Compile Include="Rendering\Universal\DeferredShaderData.cs" />
+    <Compile Include="Rendering\Universal\DepthOfField.cs" />
+    <Compile Include="Rendering\Universal\DepthOfFieldMode.cs" />
+    <Compile Include="Rendering\Universal\DepthOfFieldModeParameter.cs" />
+    <Compile Include="Rendering\Universal\DepthPrimingMode.cs" />
+    <Compile Include="Rendering\Universal\Direction.cs" />
+    <Compile Include="Rendering\Universal\DisallowMultipleRendererFeature.cs" />
+    <Compile Include="Rendering\Universal\Documentation.cs" />
+    <Compile Include="Rendering\Universal\DoublePoint.cs" />
+    <Compile Include="Rendering\Universal\Downsampling.cs" />
+    <Compile Include="Rendering\Universal\DrawSkyboxPass.cs" />
+    <Compile Include="Rendering\Universal\EdgeSide.cs" />
+    <Compile Include="Rendering\Universal\EndType.cs" />
+    <Compile Include="Rendering\Universal\FilmGrain.cs" />
+    <Compile Include="Rendering\Universal\FilmGrainLookup.cs" />
+    <Compile Include="Rendering\Universal\FilmGrainLookupParameter.cs" />
+    <Compile Include="Rendering\Universal\ForwardRenderer.cs" />
+    <Compile Include="Rendering\Universal\ForwardRendererData.cs" />
+    <Compile Include="Rendering\Universal\IDebugDisplaySettingsData.cs" />
+    <Compile Include="Rendering\Universal\IDebugDisplaySettingsPanel.cs" />
+    <Compile Include="Rendering\Universal\IDebugDisplaySettingsPanelDisposable.cs" />
+    <Compile Include="Rendering\Universal\IDebugDisplaySettingsQuery.cs" />
+    <Compile Include="Rendering\Universal\ILight2DCullResult.cs" />
+    <Compile Include="Rendering\Universal\ImageScalingMode.cs" />
+    <Compile Include="Rendering\Universal\ImageUpscalingFilter.cs" />
+    <Compile Include="Rendering\Universal\Int128.cs" />
+    <Compile Include="Rendering\Universal\IntermediateTextureMode.cs" />
+    <Compile Include="Rendering\Universal\Internal\AdditionalLightsShadowCasterPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\BitArray.cs" />
+    <Compile Include="Rendering\Universal\Internal\ColorGradingLutPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\CopyColorPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\CopyDepthPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\DeferredConfig.cs" />
+    <Compile Include="Rendering\Universal\Internal\DeferredLights.cs" />
+    <Compile Include="Rendering\Universal\Internal\DeferredPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\DeferredTiler.cs" />
+    <Compile Include="Rendering\Universal\Internal\DepthNormalOnlyPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\DepthOnlyPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\DrawObjectsPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\FinalBlitPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\ForwardLights.cs" />
+    <Compile Include="Rendering\Universal\Internal\GBufferPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\LightFlag.cs" />
+    <Compile Include="Rendering\Universal\Internal\MainLightShadowCasterPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\MotionVectorRendering.cs" />
+    <Compile Include="Rendering\Universal\Internal\MotionVectorRenderPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\NormalReconstruction.cs" />
+    <Compile Include="Rendering\Universal\Internal\PostProcessPass.cs" />
+    <Compile Include="Rendering\Universal\Internal\PreviousFrameData.cs" />
+    <Compile Include="Rendering\Universal\Internal\RenderTargetBufferSystem.cs" />
+    <Compile Include="Rendering\Universal\Internal\ScreenSpaceShadowResolvePass.cs" />
+    <Compile Include="Rendering\Universal\Internal\SortPrePunctualLight.cs" />
+    <Compile Include="Rendering\Universal\Internal\StencilUsage.cs" />
+    <Compile Include="Rendering\Universal\Internal\TileDepthRangePass.cs" />
+    <Compile Include="Rendering\Universal\IntersectNode.cs" />
+    <Compile Include="Rendering\Universal\IntPoint.cs" />
+    <Compile Include="Rendering\Universal\IntRect.cs" />
+    <Compile Include="Rendering\Universal\InvokeOnRenderObjectCallbackPass.cs" />
+    <Compile Include="Rendering\Universal\IPixelPerfectCamera.cs" />
+    <Compile Include="Rendering\Universal\IPostProcessComponent.cs" />
+    <Compile Include="Rendering\Universal\IRenderPass2D.cs" />
+    <Compile Include="Rendering\Universal\Join.cs" />
+    <Compile Include="Rendering\Universal\JoinType.cs" />
+    <Compile Include="Rendering\Universal\LayerBatch.cs" />
+    <Compile Include="Rendering\Universal\LayerUtility.cs" />
+    <Compile Include="Rendering\Universal\LensDistortion.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\CombineCallback.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\ContourOrientation.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\ContourVertex.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\Dict.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\ElementType.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\Geom.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\Mesh.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\MeshUtils.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\PQHandle.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\PriorityHeap.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\PriorityQueue.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\Tess.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\Vec3.cs" />
+    <Compile Include="Rendering\Universal\LibTessDotNet\WindingRule.cs" />
+    <Compile Include="Rendering\Universal\LiftGammaGain.cs" />
+    <Compile Include="Rendering\Universal\Light2D.cs" />
+    <Compile Include="Rendering\Universal\Light2DBlendStyle.cs" />
+    <Compile Include="Rendering\Universal\Light2DCullResult.cs" />
+    <Compile Include="Rendering\Universal\Light2DLookupTexture.cs" />
+    <Compile Include="Rendering\Universal\Light2DManager.cs" />
+    <Compile Include="Rendering\Universal\LightCookieFormat.cs" />
+    <Compile Include="Rendering\Universal\LightCookieManager.cs" />
+    <Compile Include="Rendering\Universal\LightCookieResolution.cs" />
+    <Compile Include="Rendering\Universal\LightData.cs" />
+    <Compile Include="Rendering\Universal\LightExtensions.cs" />
+    <Compile Include="Rendering\Universal\LightExtractionJob.cs" />
+    <Compile Include="Rendering\Universal\LightLayerEnum.cs" />
+    <Compile Include="Rendering\Universal\LightMinMaxZ.cs" />
+    <Compile Include="Rendering\Universal\LightRenderingMode.cs" />
+    <Compile Include="Rendering\Universal\LightStats.cs" />
+    <Compile Include="Rendering\Universal\LightUtility.cs" />
+    <Compile Include="Rendering\Universal\LocalMinima.cs" />
+    <Compile Include="Rendering\Universal\Maxima.cs" />
+    <Compile Include="Rendering\Universal\MinMaxZJob.cs" />
+    <Compile Include="Rendering\Universal\MixedLightingSetup.cs" />
+    <Compile Include="Rendering\Universal\MotionBlur.cs" />
+    <Compile Include="Rendering\Universal\MotionBlurMode.cs" />
+    <Compile Include="Rendering\Universal\MotionBlurModeParameter.cs" />
+    <Compile Include="Rendering\Universal\MotionBlurQuality.cs" />
+    <Compile Include="Rendering\Universal\MotionBlurQualityParameter.cs" />
+    <Compile Include="Rendering\Universal\MotionVectorsPersistentData.cs" />
+    <Compile Include="Rendering\Universal\MsaaQuality.cs" />
+    <Compile Include="Rendering\Universal\MyIntersectNodeSort.cs" />
+    <Compile Include="Rendering\Universal\OutPt.cs" />
+    <Compile Include="Rendering\Universal\OutRec.cs" />
+    <Compile Include="Rendering\Universal\PaniniProjection.cs" />
+    <Compile Include="Rendering\Universal\PipelineDebugLevel.cs" />
+    <Compile Include="Rendering\Universal\PixelPerfectBackgroundPass.cs" />
+    <Compile Include="Rendering\Universal\PixelPerfectCameraInternal.cs" />
+    <Compile Include="Rendering\Universal\PolyFillType.cs" />
+    <Compile Include="Rendering\Universal\PolyNode.cs" />
+    <Compile Include="Rendering\Universal\PolyTree.cs" />
+    <Compile Include="Rendering\Universal\PolyType.cs" />
+    <Compile Include="Rendering\Universal\PostProcessData.cs" />
+    <Compile Include="Rendering\Universal\PostProcessingData.cs" />
+    <Compile Include="Rendering\Universal\PostProcessPasses.cs" />
+    <Compile Include="Rendering\Universal\PostProcessUtils.cs" />
+    <Compile Include="Rendering\Universal\PreTile.cs" />
+    <Compile Include="Rendering\Universal\PunctualLightData.cs" />
+    <Compile Include="Rendering\Universal\RadixSortJob.cs" />
+    <Compile Include="Rendering\Universal\Render2DLightingPass.cs" />
+    <Compile Include="Rendering\Universal\Renderer2D.cs" />
+    <Compile Include="Rendering\Universal\Renderer2DData.cs" />
+    <Compile Include="Rendering\Universal\RendererLighting.cs" />
+    <Compile Include="Rendering\Universal\RendererOverrideOption.cs" />
+    <Compile Include="Rendering\Universal\RendererType.cs" />
+    <Compile Include="Rendering\Universal\RenderingData.cs" />
+    <Compile Include="Rendering\Universal\RenderingMode.cs" />
+    <Compile Include="Rendering\Universal\RenderingUtils.cs" />
+    <Compile Include="Rendering\Universal\RenderPassEvent.cs" />
+    <Compile Include="Rendering\Universal\RenderTargetHandle.cs" />
+    <Compile Include="Rendering\Universal\ReorderJob.cs" />
+    <Compile Include="Rendering\Universal\SampleCount.cs" />
+    <Compile Include="Rendering\Universal\Scanbeam.cs" />
+    <Compile Include="Rendering\Universal\ScreenSpaceAmbientOcclusion.cs" />
+    <Compile Include="Rendering\Universal\ScreenSpaceAmbientOcclusionSettings.cs" />
+    <Compile Include="Rendering\Universal\ScreenSpaceShadows.cs" />
+    <Compile Include="Rendering\Universal\ScreenSpaceShadowsSettings.cs" />
+    <Compile Include="Rendering\Universal\ScriptableRenderer.cs" />
+    <Compile Include="Rendering\Universal\ScriptableRendererData.cs" />
+    <Compile Include="Rendering\Universal\ScriptableRendererFeature.cs" />
+    <Compile Include="Rendering\Universal\ScriptableRenderPass.cs" />
+    <Compile Include="Rendering\Universal\ScriptableRenderPassInput.cs" />
+    <Compile Include="Rendering\Universal\ShaderData.cs" />
+    <Compile Include="Rendering\Universal\ShaderKeywordStrings.cs" />
+    <Compile Include="Rendering\Universal\ShaderPathID.cs" />
+    <Compile Include="Rendering\Universal\ShaderPropertyId.cs" />
+    <Compile Include="Rendering\Universal\ShaderUtils.cs" />
+    <Compile Include="Rendering\Universal\ShaderVariantLogLevel.cs" />
+    <Compile Include="Rendering\Universal\ShadowCascadesOption.cs" />
+    <Compile Include="Rendering\Universal\ShadowCaster2D.cs" />
+    <Compile Include="Rendering\Universal\ShadowCasterGroup2D.cs" />
+    <Compile Include="Rendering\Universal\ShadowCasterGroup2DManager.cs" />
+    <Compile Include="Rendering\Universal\ShadowData.cs" />
+    <Compile Include="Rendering\Universal\ShadowQuality.cs" />
+    <Compile Include="Rendering\Universal\ShadowRendering.cs" />
+    <Compile Include="Rendering\Universal\ShadowResolution.cs" />
+    <Compile Include="Rendering\Universal\ShadowSliceData.cs" />
+    <Compile Include="Rendering\Universal\ShadowsMidtonesHighlights.cs" />
+    <Compile Include="Rendering\Universal\ShadowUtility.cs" />
+    <Compile Include="Rendering\Universal\ShadowUtils.cs" />
+    <Compile Include="Rendering\Universal\SharedDecalEntityManager.cs" />
+    <Compile Include="Rendering\Universal\SliceCombineJob.cs" />
+    <Compile Include="Rendering\Universal\SliceCullingJob.cs" />
+    <Compile Include="Rendering\Universal\SplitToning.cs" />
+    <Compile Include="Rendering\Universal\StencilStateData.cs" />
+    <Compile Include="Rendering\Universal\StoreActionsOptimization.cs" />
+    <Compile Include="Rendering\Universal\TEdge.cs" />
+    <Compile Include="Rendering\Universal\TileData.cs" />
+    <Compile Include="Rendering\Universal\TileSize.cs" />
+    <Compile Include="Rendering\Universal\TileSizeExtensions.cs" />
+    <Compile Include="Rendering\Universal\Tonemapping.cs" />
+    <Compile Include="Rendering\Universal\TonemappingMode.cs" />
+    <Compile Include="Rendering\Universal\TonemappingModeParameter.cs" />
+    <Compile Include="Rendering\Universal\TransparentSettingsPass.cs" />
+    <Compile Include="Rendering\Universal\UniversalAdditionalCameraData.cs" />
+    <Compile Include="Rendering\Universal\UniversalAdditionalLightData.cs" />
+    <Compile Include="Rendering\Universal\UniversalRenderer.cs" />
+    <Compile Include="Rendering\Universal\UniversalRendererData.cs" />
+    <Compile Include="Rendering\Universal\UniversalRenderPipeline.cs" />
+    <Compile Include="Rendering\Universal\UniversalRenderPipelineAsset.cs" />
+    <Compile Include="Rendering\Universal\UniversalRenderPipelineEditorResources.cs" />
+    <Compile Include="Rendering\Universal\UniversalRenderPipelineGlobalSettings.cs" />
+    <Compile Include="Rendering\Universal\UpscalingFilterSelection.cs" />
+    <Compile Include="Rendering\Universal\URPHelpURLAttribute.cs" />
+    <Compile Include="Rendering\Universal\URPProfileId.cs" />
+    <Compile Include="Rendering\Universal\UTess\ArraySlice.cs" />
+    <Compile Include="Rendering\Universal\UTess\ArraySliceDebugView.cs" />
+    <Compile Include="Rendering\Universal\UTess\DelaEdgeCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\ICondition2.cs" />
+    <Compile Include="Rendering\Universal\UTess\IntersectionCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\ModuleHandle.cs" />
+    <Compile Include="Rendering\Universal\UTess\PlanarGraph.cs" />
+    <Compile Include="Rendering\Universal\UTess\Refinery.cs" />
+    <Compile Include="Rendering\Universal\UTess\Smoothen.cs" />
+    <Compile Include="Rendering\Universal\UTess\TessCellCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\TessEdgeCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\Tessellator.cs" />
+    <Compile Include="Rendering\Universal\UTess\TessEventCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\TessJunctionCompare.cs" />
+    <Compile Include="Rendering\Universal\UTess\TessLink.cs" />
+    <Compile Include="Rendering\Universal\UTess\UBounds.cs" />
+    <Compile Include="Rendering\Universal\UTess\UCircle.cs" />
+    <Compile Include="Rendering\Universal\UTess\UEncroachingSegment.cs" />
+    <Compile Include="Rendering\Universal\UTess\UEvent.cs" />
+    <Compile Include="Rendering\Universal\UTess\UEventType.cs" />
+    <Compile Include="Rendering\Universal\UTess\UHull.cs" />
+    <Compile Include="Rendering\Universal\UTess\UStar.cs" />
+    <Compile Include="Rendering\Universal\UTess\UTriangle.cs" />
+    <Compile Include="Rendering\Universal\UTess\XCompare.cs" />
+    <Compile Include="Rendering\Universal\Vignette.cs" />
+    <Compile Include="Rendering\Universal\VolumeFrameworkUpdateMode.cs" />
+    <Compile Include="Rendering\Universal\WhiteBalance.cs" />
+    <Compile Include="Rendering\Universal\XRLayout.cs" />
+    <Compile Include="Rendering\Universal\XROcclusionMeshPass.cs" />
+    <Compile Include="Rendering\Universal\XRPass.cs" />
+    <Compile Include="Rendering\Universal\XRPassCreateInfo.cs" />
+    <Compile Include="Rendering\Universal\XRSystem.cs" />
+    <Compile Include="Rendering\Universal\XRSystemData.cs" />
+    <Compile Include="Rendering\Universal\XRView.cs" />
+    <Compile Include="Rendering\Universal\XRViewCreateInfo.cs" />
+    <Compile Include="Rendering\Universal\ZBin.cs" />
+    <Compile Include="Rendering\Universal\ZBinningJob.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

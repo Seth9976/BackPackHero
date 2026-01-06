@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A989F2B-D39B-457F-9CA6-78888C40508C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.U2D.Animation</RootNamespace>
+    <AssemblyName>Unity.2D.Animation.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>..\..\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$BurstDirectCallInitializer.cs" />
+    <Compile Include="Bone.cs" />
+    <Compile Include="BoneDeformBatchedJob.cs" />
+    <Compile Include="BufferManager.cs" />
+    <Compile Include="BurstedSpriteSkinUtilities.cs" />
+    <Compile Include="CalculateSpriteSkinAABBJob.cs" />
+    <Compile Include="CopySpriteRendererBuffersJob.cs" />
+    <Compile Include="FillPerSkinJobSingleThread.cs" />
+    <Compile Include="INameHash.cs" />
+    <Compile Include="LocalToWorldTransformAccessJob.cs" />
+    <Compile Include="NativeArrayHelpers.cs" />
+    <Compile Include="NativeByteArray.cs" />
+    <Compile Include="NativeCustomSlice.cs" />
+    <Compile Include="NativeCustomSliceEnumerator.cs" />
+    <Compile Include="PerSkinJobData.cs" />
+    <Compile Include="PositionTangentVertex.cs" />
+    <Compile Include="PositionVertex.cs" />
+    <Compile Include="PrepareDeformJob.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkeletonAsset.cs" />
+    <Compile Include="SkinDeformBatchedJob.cs" />
+    <Compile Include="SpriteCategoryEntry.cs" />
+    <Compile Include="SpriteCategoryEntryOverride.cs" />
+    <Compile Include="SpriteLibCategory.cs" />
+    <Compile Include="SpriteLibCategoryOverride.cs" />
+    <Compile Include="SpriteLibrary.cs" />
+    <Compile Include="SpriteLibraryAsset.cs" />
+    <Compile Include="SpriteLibrarySourceAsset.cs" />
+    <Compile Include="SpriteLibraryUtility.cs" />
+    <Compile Include="SpriteResolver.cs" />
+    <Compile Include="SpriteSkin.cs" />
+    <Compile Include="SpriteSkinComposite.cs" />
+    <Compile Include="SpriteSkinData.cs" />
+    <Compile Include="SpriteSkinUpdateHelper.cs" />
+    <Compile Include="SpriteSkinUtility.cs" />
+    <Compile Include="SpriteSkinValidationResult.cs" />
+    <Compile Include="TransformAccessJob.cs" />
+    <Compile Include="UpdateBoundJob.cs" />
+    <Compile Include="VertexBuffer.cs" />
+    <Compile Include="WorldToLocalTransformAccessJob.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

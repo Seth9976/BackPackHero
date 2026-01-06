@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{536A3266-21B0-4164-80A7-E1B48EDCE764}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.Api.Helix.Models</RootNamespace>
+    <AssemblyName>TwitchLib.Api.Helix.Models</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="TwitchLib.Api.Core.Enums">
+      <HintPath>..\..\TwitchLib.Api.Core.Enums.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ads\StartCommercialRequest.cs" />
+    <Compile Include="Ads\StartCommercialResponse.cs" />
+    <Compile Include="Analytics\ExtensionAnalytics.cs" />
+    <Compile Include="Analytics\GameAnalytics.cs" />
+    <Compile Include="Analytics\GetExtensionAnalyticsResponse.cs" />
+    <Compile Include="Analytics\GetGameAnalyticsResponse.cs" />
+    <Compile Include="Bits\Cheermote.cs" />
+    <Compile Include="Bits\DateRange.cs" />
+    <Compile Include="Bits\ExtensionBitsProducts\Cost.cs" />
+    <Compile Include="Bits\ExtensionBitsProducts\ExtensionBitsProduct.cs" />
+    <Compile Include="Bits\ExtensionBitsProducts\GetExtensionBitsProductsResponse.cs" />
+    <Compile Include="Bits\ExtensionBitsProducts\UpdateExtensionBitsProductResponse.cs" />
+    <Compile Include="Bits\GetBitsLeaderboardResponse.cs" />
+    <Compile Include="Bits\GetCheermotesResponse.cs" />
+    <Compile Include="Bits\ImageList.cs" />
+    <Compile Include="Bits\Images.cs" />
+    <Compile Include="Bits\Listing.cs" />
+    <Compile Include="Bits\Tier.cs" />
+    <Compile Include="ChannelPoints\CreateCustomReward\CreateCustomRewardsRequest.cs" />
+    <Compile Include="ChannelPoints\CreateCustomReward\CreateCustomRewardsResponse.cs" />
+    <Compile Include="ChannelPoints\CustomReward.cs" />
+    <Compile Include="ChannelPoints\DefaultImage.cs" />
+    <Compile Include="ChannelPoints\GetCustomRewardRedemption\GetCustomRewardRedemptionResponse.cs" />
+    <Compile Include="ChannelPoints\GetCustomReward\GetCustomRewardsResponse.cs" />
+    <Compile Include="ChannelPoints\GlobalCooldownSetting.cs" />
+    <Compile Include="ChannelPoints\Image.cs" />
+    <Compile Include="ChannelPoints\MaxPerStreamSetting.cs" />
+    <Compile Include="ChannelPoints\MaxPerUserPerStreamSetting.cs" />
+    <Compile Include="ChannelPoints\Reward.cs" />
+    <Compile Include="ChannelPoints\RewardRedemption.cs" />
+    <Compile Include="ChannelPoints\UpdateCustomRewardRedemptionStatus\UpdateCustomRewardRedemptionStatusRequest.cs" />
+    <Compile Include="ChannelPoints\UpdateCustomReward\UpdateCustomRewardRequest.cs" />
+    <Compile Include="ChannelPoints\UpdateCustomReward\UpdateCustomRewardResponse.cs" />
+    <Compile Include="ChannelPoints\UpdateRedemptionStatus\UpdateRedemptionStatusResponse.cs" />
+    <Compile Include="Channels\GetChannelEditors\ChannelEditor.cs" />
+    <Compile Include="Channels\GetChannelEditors\GetChannelEditorsResponse.cs" />
+    <Compile Include="Channels\GetChannelInformation\ChannelInformation.cs" />
+    <Compile Include="Channels\GetChannelInformation\GetChannelInformationResponse.cs" />
+    <Compile Include="Channels\GetChannelVIPs\ChannelVIPsResponseModel.cs" />
+    <Compile Include="Channels\GetChannelVIPs\GetChannelVIPsResponse.cs" />
+    <Compile Include="Channels\ModifyChannelInformation\ModifyChannelInformationRequest.cs" />
+    <Compile Include="Charity\GetCharityCampaign\Amount.cs" />
+    <Compile Include="Charity\GetCharityCampaign\CharityCampaignResponseModel.cs" />
+    <Compile Include="Charity\GetCharityCampaign\GetCharityCampaignResponse.cs" />
+    <Compile Include="Chat\AnnouncementColors.cs" />
+    <Compile Include="Chat\Badges\BadgeEmoteSet.cs" />
+    <Compile Include="Chat\Badges\BadgeVersion.cs" />
+    <Compile Include="Chat\Badges\GetChannelChatBadges\GetChannelChatBadgesResponse.cs" />
+    <Compile Include="Chat\Badges\GetGlobalChatBadges\GetGlobalChatBadgesResponse.cs" />
+    <Compile Include="Chat\ChatSettings\ChatSettings.cs" />
+    <Compile Include="Chat\ChatSettings\ChatSettingsResponseModel.cs" />
+    <Compile Include="Chat\ChatSettings\GetChatSettingsResponse.cs" />
+    <Compile Include="Chat\ChatSettings\UpdateChatSettingsResponse.cs" />
+    <Compile Include="Chat\ChatSettings\UpdateChatSettingsResponseModel.cs" />
+    <Compile Include="Chat\Emotes\ChannelEmote.cs" />
+    <Compile Include="Chat\Emotes\Emote.cs" />
+    <Compile Include="Chat\Emotes\EmoteImages.cs" />
+    <Compile Include="Chat\Emotes\EmoteSet.cs" />
+    <Compile Include="Chat\Emotes\GetChannelEmotes\GetChannelEmotesResponse.cs" />
+    <Compile Include="Chat\Emotes\GetEmoteSets\GetEmoteSetsResponse.cs" />
+    <Compile Include="Chat\Emotes\GetGlobalEmotes\GetGlobalEmotesResponse.cs" />
+    <Compile Include="Chat\Emotes\GlobalEmote.cs" />
+    <Compile Include="Chat\GetChatters\Chatter.cs" />
+    <Compile Include="Chat\GetChatters\GetChattersResponse.cs" />
+    <Compile Include="Chat\GetUserChatColor\GetUserChatColorResponse.cs" />
+    <Compile Include="Chat\GetUserChatColor\UserChatColorResponseModel.cs" />
+    <Compile Include="Chat\UserColors.cs" />
+    <Compile Include="Clips\CreateClip\CreatedClip.cs" />
+    <Compile Include="Clips\CreateClip\CreatedClipResponse.cs" />
+    <Compile Include="Clips\GetClips\Clip.cs" />
+    <Compile Include="Clips\GetClips\GetClipsResponse.cs" />
+    <Compile Include="Common\DateRange.cs" />
+    <Compile Include="Common\Pagination.cs" />
+    <Compile Include="Common\Tag.cs" />
+    <Compile Include="Entitlements\GetCodeStatus\GetCodeStatusResponse.cs" />
+    <Compile Include="Entitlements\GetDropsEntitlements\DropsEntitlement.cs" />
+    <Compile Include="Entitlements\GetDropsEntitlements\GetDropsEntitlementsResponse.cs" />
+    <Compile Include="Entitlements\RedeemCode\RedeemCodeResponse.cs" />
+    <Compile Include="Entitlements\Status.cs" />
+    <Compile Include="Entitlements\UpdateDropsEntitlements\DropEntitlementUpdate.cs" />
+    <Compile Include="Entitlements\UpdateDropsEntitlements\UpdateDropsEntitlementsResponse.cs" />
+    <Compile Include="EventSub\CreateEventSubSubscriptionResponse.cs" />
+    <Compile Include="EventSub\EventSubSubscription.cs" />
+    <Compile Include="EventSub\EventSubTransport.cs" />
+    <Compile Include="EventSub\GetEventSubSubscriptionsResponse.cs" />
+    <Compile Include="Extensions\LiveChannels\GetExtensionLiveChannelsResponse.cs" />
+    <Compile Include="Extensions\LiveChannels\LiveChannel.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\Component.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\GetReleasedExtensionsResponse.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\IconUrls.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\Mobile.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\Panel.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\ReleasedExtension.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\VideoOverlay.cs" />
+    <Compile Include="Extensions\ReleasedExtensions\Views.cs" />
+    <Compile Include="Extensions\Transactions\Cost.cs" />
+    <Compile Include="Extensions\Transactions\GetExtensionTransactionsResponse.cs" />
+    <Compile Include="Extensions\Transactions\ProductData.cs" />
+    <Compile Include="Extensions\Transactions\Transaction.cs" />
+    <Compile Include="Games\Game.cs" />
+    <Compile Include="Games\GetGamesResponse.cs" />
+    <Compile Include="Games\GetTopGamesResponse.cs" />
+    <Compile Include="Goals\CreatorGoal.cs" />
+    <Compile Include="Goals\GetCreatorGoalsResponse.cs" />
+    <Compile Include="Helpers\ExtensionAnalytics.cs" />
+    <Compile Include="HypeTrain\GetHypeTrainResponse.cs" />
+    <Compile Include="HypeTrain\HypeTrain.cs" />
+    <Compile Include="HypeTrain\HypeTrainContribution.cs" />
+    <Compile Include="HypeTrain\HypeTrainEventData.cs" />
+    <Compile Include="Moderation\AutomodSettings\AutomodSettings.cs" />
+    <Compile Include="Moderation\AutomodSettings\AutomodSettingsResponseModel.cs" />
+    <Compile Include="Moderation\AutomodSettings\GetAutomodSettingsResponse.cs" />
+    <Compile Include="Moderation\AutomodSettings\UpdateAutomodSettingsResponse.cs" />
+    <Compile Include="Moderation\BanUser\BannedUser.cs" />
+    <Compile Include="Moderation\BanUser\BanUser.cs" />
+    <Compile Include="Moderation\BanUser\BanUserRequest.cs" />
+    <Compile Include="Moderation\BanUser\BanUserResponse.cs" />
+    <Compile Include="Moderation\BanUser\TimeoutUser.cs" />
+    <Compile Include="Moderation\BlockedTerms\AddBlockedTermResponse.cs" />
+    <Compile Include="Moderation\BlockedTerms\BlockedTerm.cs" />
+    <Compile Include="Moderation\BlockedTerms\GetBlockedTermsResponse.cs" />
+    <Compile Include="Moderation\CheckAutoModStatus\AutoModResult.cs" />
+    <Compile Include="Moderation\CheckAutoModStatus\CheckAutoModStatusResponse.cs" />
+    <Compile Include="Moderation\CheckAutoModStatus\Message.cs" />
+    <Compile Include="Moderation\CheckAutoModStatus\Request\MessageRequest.cs" />
+    <Compile Include="Moderation\GetBannedEvents\BannedEvent.cs" />
+    <Compile Include="Moderation\GetBannedEvents\EventData.cs" />
+    <Compile Include="Moderation\GetBannedEvents\GetBannedEventsResponse.cs" />
+    <Compile Include="Moderation\GetBannedUsers\BannedUserEvent.cs" />
+    <Compile Include="Moderation\GetBannedUsers\GetBannedUsersResponse.cs" />
+    <Compile Include="Moderation\GetModeratorEvents\EventData.cs" />
+    <Compile Include="Moderation\GetModeratorEvents\GetModeratorEventsResponse.cs" />
+    <Compile Include="Moderation\GetModeratorEvents\ModeratorEvent.cs" />
+    <Compile Include="Moderation\GetModerators\GetModeratorsResponse.cs" />
+    <Compile Include="Moderation\GetModerators\Moderator.cs" />
+    <Compile Include="Polls\Choice.cs" />
+    <Compile Include="Polls\CreatePoll\Choice.cs" />
+    <Compile Include="Polls\CreatePoll\CreatePollRequest.cs" />
+    <Compile Include="Polls\CreatePoll\CreatePollResponse.cs" />
+    <Compile Include="Polls\EndPoll\EndPollResponse.cs" />
+    <Compile Include="Polls\GetPolls\GetPollsResponse.cs" />
+    <Compile Include="Polls\Poll.cs" />
+    <Compile Include="Predictions\CreatePrediction\CreatePredictionRequest.cs" />
+    <Compile Include="Predictions\CreatePrediction\CreatePredictionResponse.cs" />
+    <Compile Include="Predictions\CreatePrediction\Outcome.cs" />
+    <Compile Include="Predictions\EndPrediction\EndPredictionResponse.cs" />
+    <Compile Include="Predictions\GetPredictions\GetPredictionsResponse.cs" />
+    <Compile Include="Predictions\Outcome.cs" />
+    <Compile Include="Predictions\Prediction.cs" />
+    <Compile Include="Predictions\TopPredictor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raids\Raid.cs" />
+    <Compile Include="Raids\StartRaid\StartRaidResponse.cs" />
+    <Compile Include="Schedule\Category.cs" />
+    <Compile Include="Schedule\ChannelStreamSchedule.cs" />
+    <Compile Include="Schedule\CreateChannelStreamSegment\CreateChannelStreamSegmentRequest.cs" />
+    <Compile Include="Schedule\CreateChannelStreamSegment\CreateChannelStreamSegmentResponse.cs" />
+    <Compile Include="Schedule\GetChannelStreamSchedule\GetChannelStreamScheduleResponse.cs" />
+    <Compile Include="Schedule\Segment.cs" />
+    <Compile Include="Schedule\UpdateChannelStreamSegment\UpdateChannelStreamSegmentRequest.cs" />
+    <Compile Include="Schedule\UpdateChannelStreamSegment\UpdateChannelStreamSegmentResponse.cs" />
+    <Compile Include="Schedule\Vacation.cs" />
+    <Compile Include="Search\Channel.cs" />
+    <Compile Include="Search\SearchCategoriesResponse.cs" />
+    <Compile Include="Search\SearchChannelsResponse.cs" />
+    <Compile Include="Soundtrack\Album.cs" />
+    <Compile Include="Soundtrack\Artist.cs" />
+    <Compile Include="Soundtrack\GetCurrentTrack\CurrentTrack.cs" />
+    <Compile Include="Soundtrack\GetCurrentTrack\GetCurrentTrackResponse.cs" />
+    <Compile Include="Soundtrack\GetPlaylists\GetPlaylistsResponse.cs" />
+    <Compile Include="Soundtrack\GetPlaylists\PlaylistMetadata.cs" />
+    <Compile Include="Soundtrack\GetPlaylist\GetPlaylistResponse.cs" />
+    <Compile Include="Soundtrack\Source.cs" />
+    <Compile Include="Soundtrack\Track.cs" />
+    <Compile Include="Streams\CreateStreamMarker\CreatedMarker.cs" />
+    <Compile Include="Streams\CreateStreamMarker\CreateStreamMarkerRequest.cs" />
+    <Compile Include="Streams\CreateStreamMarker\CreateStreamMarkerResponse.cs" />
+    <Compile Include="Streams\GetFollowedStreams\GetFollowedStreamsResponse.cs" />
+    <Compile Include="Streams\GetFollowedStreams\Stream.cs" />
+    <Compile Include="Streams\GetStreamKey\GetStreamKeyResponse.cs" />
+    <Compile Include="Streams\GetStreamKey\StreamKey.cs" />
+    <Compile Include="Streams\GetStreamMarkers\GetStreamMarkersResponse.cs" />
+    <Compile Include="Streams\GetStreamMarkers\Marker.cs" />
+    <Compile Include="Streams\GetStreamMarkers\UserMarkerListing.cs" />
+    <Compile Include="Streams\GetStreamMarkers\Video.cs" />
+    <Compile Include="Streams\GetStreams\GetStreamsResponse.cs" />
+    <Compile Include="Streams\GetStreams\LiveStreams.cs" />
+    <Compile Include="Streams\GetStreams\Stream.cs" />
+    <Compile Include="Streams\GetStreamTags\GetStreamTagsResponse.cs" />
+    <Compile Include="Subscriptions\CheckUserSubscriptionResponse.cs" />
+    <Compile Include="Subscriptions\GetBroadcasterSubscriptionsResponse.cs" />
+    <Compile Include="Subscriptions\GetUserSubscriptionsResponse.cs" />
+    <Compile Include="Subscriptions\Subscription.cs" />
+    <Compile Include="Tags\GetAllStreamTagsResponse.cs" />
+    <Compile Include="Teams\ChannelTeam.cs" />
+    <Compile Include="Teams\GetChannelTeamsResponse.cs" />
+    <Compile Include="Teams\GetTeamsResponse.cs" />
+    <Compile Include="Teams\Team.cs" />
+    <Compile Include="Teams\TeamBase.cs" />
+    <Compile Include="Teams\TeamMember.cs" />
+    <Compile Include="Users\GetUserActiveExtensions\GetUserActiveExtensionsResponse.cs" />
+    <Compile Include="Users\GetUserBlockList\BlockedUser.cs" />
+    <Compile Include="Users\GetUserBlockList\GetUserBlockListResponse.cs" />
+    <Compile Include="Users\GetUserExtensions\GetUserExtensionsResponse.cs" />
+    <Compile Include="Users\GetUserFollows\Follow.cs" />
+    <Compile Include="Users\GetUserFollows\GetUsersFollowsResponse.cs" />
+    <Compile Include="Users\GetUsers\GetUsersResponse.cs" />
+    <Compile Include="Users\GetUsers\User.cs" />
+    <Compile Include="Users\Internal\ActiveExtensions.cs" />
+    <Compile Include="Users\Internal\ExtensionSlot.cs" />
+    <Compile Include="Users\Internal\UserActiveExtension.cs" />
+    <Compile Include="Users\Internal\UserExtension.cs" />
+    <Compile Include="Users\Internal\UserExtensionState.cs" />
+    <Compile Include="Users\UpdateUserExtensions\UpdateUserExtensionsRequest.cs" />
+    <Compile Include="Videos\DeleteVideos\DeleteVideosResponse.cs" />
+    <Compile Include="Videos\GetVideos\GetVideosResponse.cs" />
+    <Compile Include="Videos\GetVideos\MutedSegment.cs" />
+    <Compile Include="Videos\GetVideos\Video.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

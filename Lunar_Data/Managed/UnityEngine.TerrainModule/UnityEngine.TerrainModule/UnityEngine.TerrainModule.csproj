@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5861C631-A276-4A16-A47F-8358CF4379C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine.TerrainModule</RootNamespace>
+    <AssemblyName>UnityEngine.TerrainModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="UnityEngine\DetailInstanceTransform.cs" />
+    <Compile Include="UnityEngine\DetailPrototype.cs" />
+    <Compile Include="UnityEngine\DetailRenderMode.cs" />
+    <Compile Include="UnityEngine\PatchExtents.cs" />
+    <Compile Include="UnityEngine\SpeedTreeWindAsset.cs" />
+    <Compile Include="UnityEngine\SplatPrototype.cs" />
+    <Compile Include="UnityEngine\Terrain.cs" />
+    <Compile Include="UnityEngine\TerrainCallbacks.cs" />
+    <Compile Include="UnityEngine\TerrainChangedFlags.cs" />
+    <Compile Include="UnityEngine\TerrainData.cs" />
+    <Compile Include="UnityEngine\TerrainExtensions.cs" />
+    <Compile Include="UnityEngine\TerrainHeightmapSyncControl.cs" />
+    <Compile Include="UnityEngine\TerrainLayer.cs" />
+    <Compile Include="UnityEngine\TerrainRenderFlags.cs" />
+    <Compile Include="UnityEngine\TerrainTools\BrushTransform.cs" />
+    <Compile Include="UnityEngine\TerrainTools\PaintContext.cs" />
+    <Compile Include="UnityEngine\TerrainTools\TerrainBuiltinPaintMaterialPasses.cs" />
+    <Compile Include="UnityEngine\TerrainTools\TerrainPaintUtility.cs" />
+    <Compile Include="UnityEngine\TerrainUtils\TerrainMap.cs" />
+    <Compile Include="UnityEngine\TerrainUtils\TerrainMapStatusCode.cs" />
+    <Compile Include="UnityEngine\TerrainUtils\TerrainTileCoord.cs" />
+    <Compile Include="UnityEngine\TerrainUtils\TerrainUtility.cs" />
+    <Compile Include="UnityEngine\Tree.cs" />
+    <Compile Include="UnityEngine\TreeInstance.cs" />
+    <Compile Include="UnityEngine\TreePrototype.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

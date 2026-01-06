@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F77B3842-F140-463E-93F8-DF14ABE46ECB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaveSystem</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>..\..\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Febucci.TextAnimator.Runtime">
+      <HintPath>..\..\Febucci.TextAnimator.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Febucci.TextAnimator.TMP.Runtime">
+      <HintPath>..\..\Febucci.TextAnimator.TMP.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccomplishmentOnStart.cs" />
+    <Compile Include="ActionIndicator.cs" />
+    <Compile Include="AllUnlocksProgressPanel.cs" />
+    <Compile Include="AnimationEvent.cs" />
+    <Compile Include="AnimatorReplacement.cs" />
+    <Compile Include="AnimatorTimeScaler.cs" />
+    <Compile Include="Boss.cs" />
+    <Compile Include="Builder.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="ButtonHandler.cs" />
+    <Compile Include="ButtonPopUp.cs" />
+    <Compile Include="CameraMover.cs" />
+    <Compile Include="CameraOptions.cs" />
+    <Compile Include="CameraShaker.cs" />
+    <Compile Include="CanvasManager.cs" />
+    <Compile Include="CanvasMasterContentScaler.cs" />
+    <Compile Include="CardDescription.cs" />
+    <Compile Include="CardDescriptor.cs" />
+    <Compile Include="CardEffect.cs" />
+    <Compile Include="CardManager.cs" />
+    <Compile Include="CardNameSpriteChanger.cs" />
+    <Compile Include="CardPlacement.cs" />
+    <Compile Include="CardPositionLayoutElement.cs" />
+    <Compile Include="CardSpawner.cs" />
+    <Compile Include="CenterScrollView.cs" />
+    <Compile Include="CharacterSelection.cs" />
+    <Compile Include="ChooseCard.cs" />
+    <Compile Include="ChoosePanel.cs" />
+    <Compile Include="ConfirmationBox.cs" />
+    <Compile Include="ConfirmationBoxManager.cs" />
+    <Compile Include="ControllerSpriteManager.cs" />
+    <Compile Include="CopySprite.cs" />
+    <Compile Include="CrashShip.cs" />
+    <Compile Include="DamageDealer.cs" />
+    <Compile Include="DamageIndicator.cs" />
+    <Compile Include="DeckButton.cs" />
+    <Compile Include="DeckCard.cs" />
+    <Compile Include="DeckInfo.cs" />
+    <Compile Include="DeckPanel.cs" />
+    <Compile Include="DeckSelector.cs" />
+    <Compile Include="DefendableObject.cs" />
+    <Compile Include="Destructible.cs" />
+    <Compile Include="EffectOnGround.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="EnemyBehavior.cs" />
+    <Compile Include="EnemyBehavior_Siren.cs" />
+    <Compile Include="EnemyBullet.cs" />
+    <Compile Include="EnemyDestructionParticleSpriteSetter.cs" />
+    <Compile Include="EnemyHitter.cs" />
+    <Compile Include="EnemyShooter.cs" />
+    <Compile Include="EnemyWave.cs" />
+    <Compile Include="EnergyBarMaster.cs" />
+    <Compile Include="EnergyCapsule.cs" />
+    <Compile Include="EntranceManager.cs" />
+    <Compile Include="EventButton.cs" />
+    <Compile Include="EventManager.cs" />
+    <Compile Include="Event_Duplication.cs" />
+    <Compile Include="Event_Healing.cs" />
+    <Compile Include="Event_RelicGamble.cs" />
+    <Compile Include="Event_Removal.cs" />
+    <Compile Include="Event_TradingComplete.cs" />
+    <Compile Include="Event_TradingSetup.cs" />
+    <Compile Include="Explosion.cs" />
+    <Compile Include="FadeMaster.cs" />
+    <Compile Include="FadeOutWithPlayer.cs" />
+    <Compile Include="FollowObject.cs" />
+    <Compile Include="ForceApplier.cs" />
+    <Compile Include="GameCamera.cs" />
+    <Compile Include="GameEventHandler.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="GameOverManager.cs" />
+    <Compile Include="Grenade.cs" />
+    <Compile Include="GroundDetector.cs" />
+    <Compile Include="HealthBarMaster.cs" />
+    <Compile Include="HordeRemainingDisplay.cs" />
+    <Compile Include="InputActions.cs" />
+    <Compile Include="InputManager.cs" />
+    <Compile Include="ItemDropper.cs" />
+    <Compile Include="JSONStateSerializer.cs" />
+    <Compile Include="LanguageManager.cs" />
+    <Compile Include="Laser.cs" />
+    <Compile Include="LevelChallengeText.cs" />
+    <Compile Include="LightningStrike.cs" />
+    <Compile Include="LoadingManager.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="MapDescription.cs" />
+    <Compile Include="MapDescriptorManager.cs" />
+    <Compile Include="MapEvent.cs" />
+    <Compile Include="MapEventContentSpawner.cs" />
+    <Compile Include="MapPlayer.cs" />
+    <Compile Include="MapSelector.cs" />
+    <Compile Include="MapSpawner.cs" />
+    <Compile Include="MenuManager.cs" />
+    <Compile Include="MenuSelector.cs" />
+    <Compile Include="MessageSpawner.cs" />
+    <Compile Include="Modifier.cs" />
+    <Compile Include="ModifierManager.cs" />
+    <Compile Include="OperatorPanel.cs" />
+    <Compile Include="OptionsManager.cs" />
+    <Compile Include="OrbitalBullet.cs" />
+    <Compile Include="ParticleSystemTimeScaler.cs" />
+    <Compile Include="PassiveEffect.cs" />
+    <Compile Include="PassiveManager.cs" />
+    <Compile Include="PauseManager.cs" />
+    <Compile Include="PauseMenu.cs" />
+    <Compile Include="PickUp.cs" />
+    <Compile Include="PickUpSpawner.cs" />
+    <Compile Include="PickUpTimer.cs" />
+    <Compile Include="PlatformConfigurator.cs" />
+    <Compile Include="PlatformModifier.cs" />
+    <Compile Include="PlatformWrapper.cs" />
+    <Compile Include="PlayableCharacter.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerBlur.cs" />
+    <Compile Include="PlayerHitBox.cs" />
+    <Compile Include="PlayerShooter.cs" />
+    <Compile Include="PlayerSpawn.cs" />
+    <Compile Include="PolygonShaper.cs" />
+    <Compile Include="PopUp.cs" />
+    <Compile Include="PopUpManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomizeFloor.cs" />
+    <Compile Include="RedSliderFill.cs" />
+    <Compile Include="Relic.cs" />
+    <Compile Include="RelicDescriptor.cs" />
+    <Compile Include="RelicManager.cs" />
+    <Compile Include="RemoveAfterTime.cs" />
+    <Compile Include="ReplacementText.cs" />
+    <Compile Include="RobotAnimatorController.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomManager.cs" />
+    <Compile Include="Room_SpecialObjective.cs" />
+    <Compile Include="RunPanel.cs" />
+    <Compile Include="RunPanelCursor.cs" />
+    <Compile Include="RunType.cs" />
+    <Compile Include="RunTypeButton.cs" />
+    <Compile Include="RunTypeDescriptionWindow.cs" />
+    <Compile Include="RunTypeDescriptor.cs" />
+    <Compile Include="RunTypeManager.cs" />
+    <Compile Include="RunTypeWindow.cs" />
+    <Compile Include="SaveManager.cs" />
+    <Compile Include="SceneLoader.cs" />
+    <Compile Include="ScrollRectInputHandler.cs" />
+    <Compile Include="SetMask.cs" />
+    <Compile Include="SFXPlayer.cs" />
+    <Compile Include="SimpleAnimator.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SingleUI.cs" />
+    <Compile Include="Slash.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="SpawnPoint.cs" />
+    <Compile Include="SpecialLevelProgressComputer.cs" />
+    <Compile Include="States\OptionsState.cs" />
+    <Compile Include="States\ProgressState.cs" />
+    <Compile Include="States\State.cs" />
+    <Compile Include="States\StateType.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="StopWatchManager.cs" />
+    <Compile Include="TilemapTimeScaler.cs" />
+    <Compile Include="TimeManager.cs" />
+    <Compile Include="TimeManagerCompo.cs" />
+    <Compile Include="Tooltip.cs" />
+    <Compile Include="TooltipCreator.cs" />
+    <Compile Include="Turret.cs" />
+    <Compile Include="TutorialManager.cs" />
+    <Compile Include="UDictionary.2.cs" />
+    <Compile Include="UDictionary.cs" />
+    <Compile Include="Unlock.cs" />
+    <Compile Include="UnlockCompletePanel.cs" />
+    <Compile Include="UnlockManager.cs" />
+    <Compile Include="UnlockProgressBar.cs" />
+    <Compile Include="UnlockProgressPanel.cs" />
+    <Compile Include="UnlockSceneManager.cs" />
+    <Compile Include="URLOpener.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VelocityMovement.cs" />
+    <Compile Include="WaveManager.cs" />
+    <Compile Include="Wiggle.cs" />
+    <Compile Include="XPManager.cs" />
+    <Compile Include="ZombieBait.cs" />
+    <Compile Include="ZPositioner.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

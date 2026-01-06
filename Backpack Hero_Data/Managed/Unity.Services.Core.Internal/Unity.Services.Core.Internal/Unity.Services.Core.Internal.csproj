@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8163F3B-E6FC-4162-A4A0-BE34ACD8B889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.Services</RootNamespace>
+    <AssemblyName>Unity.Services.Core.Internal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\Internal\IAccessToken.cs" />
+    <Compile Include="Authentication\Internal\IEnvironmentId.cs" />
+    <Compile Include="Authentication\Internal\IPlayerId.cs" />
+    <Compile Include="Core\Analytics\Internal\IAnalyticsStandardEventComponent.cs" />
+    <Compile Include="Core\Configuration\Internal\ICloudProjectId.cs" />
+    <Compile Include="Core\Configuration\Internal\IExternalUserId.cs" />
+    <Compile Include="Core\Configuration\Internal\IProjectConfiguration.cs" />
+    <Compile Include="Core\Device\Internal\IInstallationId.cs" />
+    <Compile Include="Core\Environments\Internal\IEnvironments.cs" />
+    <Compile Include="Core\Internal\AsyncOperation.2.cs" />
+    <Compile Include="Core\Internal\AsyncOperation.cs" />
+    <Compile Include="Core\Internal\AsyncOperationAwaiter.2.cs" />
+    <Compile Include="Core\Internal\AsyncOperationAwaiter.cs" />
+    <Compile Include="Core\Internal\AsyncOperationBase.2.cs" />
+    <Compile Include="Core\Internal\AsyncOperationBase.cs" />
+    <Compile Include="Core\Internal\AsyncOperationExtensions.cs" />
+    <Compile Include="Core\Internal\AsyncOperationStatus.cs" />
+    <Compile Include="Core\Internal\CircularDependencyException.cs" />
+    <Compile Include="Core\Internal\ComponentRegistry.cs" />
+    <Compile Include="Core\Internal\CoreDiagnostics.cs" />
+    <Compile Include="Core\Internal\CoreLogger.cs" />
+    <Compile Include="Core\Internal\CoreMetrics.cs" />
+    <Compile Include="Core\Internal\CoreRegistration.cs" />
+    <Compile Include="Core\Internal\CoreRegistry.cs" />
+    <Compile Include="Core\Internal\CoreRegistryInitializer.cs" />
+    <Compile Include="Core\Internal\DependencyTree.cs" />
+    <Compile Include="Core\Internal\DependencyTreeComponentHashException.cs" />
+    <Compile Include="Core\Internal\DependencyTreeExtensions.cs" />
+    <Compile Include="Core\Internal\DependencyTreeInitializeOrderSorter.cs" />
+    <Compile Include="Core\Internal\DependencyTreePackageHashException.cs" />
+    <Compile Include="Core\Internal\DependencyTreeSortFailedException.cs" />
+    <Compile Include="Core\Internal\DictionaryExtensions.cs" />
+    <Compile Include="Core\Internal\HashException.cs" />
+    <Compile Include="Core\Internal\IAsyncOperation.2.cs" />
+    <Compile Include="Core\Internal\IAsyncOperation.cs" />
+    <Compile Include="Core\Internal\IAsyncOperationAwaiter.2.cs" />
+    <Compile Include="Core\Internal\IAsyncOperationAwaiter.cs" />
+    <Compile Include="Core\Internal\IComponentRegistry.cs" />
+    <Compile Include="Core\Internal\IInitializablePackage.cs" />
+    <Compile Include="Core\Internal\IPackageRegistry.cs" />
+    <Compile Include="Core\Internal\IServiceComponent.cs" />
+    <Compile Include="Core\Internal\LockedComponentRegistry.cs" />
+    <Compile Include="Core\Internal\LockedPackageRegistry.cs" />
+    <Compile Include="Core\Internal\MissingComponent.cs" />
+    <Compile Include="Core\Internal\PackageInitializationInfo.cs" />
+    <Compile Include="Core\Internal\PackageRegistry.cs" />
+    <Compile Include="Core\Internal\TaskAsyncOperation.2.cs" />
+    <Compile Include="Core\Internal\TaskAsyncOperation.cs" />
+    <Compile Include="Core\Internal\UnityServicesInitializer.cs" />
+    <Compile Include="Core\Internal\UnityServicesInternal.cs" />
+    <Compile Include="Core\Internal\UnityWebRequestUtils.cs" />
+    <Compile Include="Core\Networking\Internal\HttpOptions.cs" />
+    <Compile Include="Core\Networking\Internal\HttpRequest.cs" />
+    <Compile Include="Core\Networking\Internal\HttpRequestExtensions.cs" />
+    <Compile Include="Core\Networking\Internal\HttpResponse.cs" />
+    <Compile Include="Core\Networking\Internal\IHttpClient.cs" />
+    <Compile Include="Core\Networking\Internal\ReadOnlyHttpRequest.cs" />
+    <Compile Include="Core\Networking\Internal\ReadOnlyHttpResponse.cs" />
+    <Compile Include="Core\Scheduler\Internal\IActionScheduler.cs" />
+    <Compile Include="Core\Telemetry\Internal\IDiagnostics.cs" />
+    <Compile Include="Core\Telemetry\Internal\IDiagnosticsComponentProvider.cs" />
+    <Compile Include="Core\Telemetry\Internal\IDiagnosticsFactory.cs" />
+    <Compile Include="Core\Telemetry\Internal\IMetrics.cs" />
+    <Compile Include="Core\Telemetry\Internal\IMetricsFactory.cs" />
+    <Compile Include="Core\Threading\Internal\IUnityThreadUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qos\Internal\IQosResults.cs" />
+    <Compile Include="Qos\Internal\QosResult.cs" />
+    <Compile Include="Vivox\Internal\IVivox.cs" />
+    <Compile Include="Vivox\Internal\IVivoxTokenProviderInternal.cs" />
+    <Compile Include="Wire\Internal\ChannelToken.cs" />
+    <Compile Include="Wire\Internal\IChannel.cs" />
+    <Compile Include="Wire\Internal\IChannelTokenProvider.cs" />
+    <Compile Include="Wire\Internal\IWire.cs" />
+    <Compile Include="Wire\Internal\SubscriptionState.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

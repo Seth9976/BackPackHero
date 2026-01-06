@@ -1,0 +1,141 @@
+﻿using System;
+using System.Collections;
+
+namespace System.Net
+{
+	// Token: 0x02000487 RID: 1159
+	internal class DigestClient : IAuthenticationModule
+	{
+		// Token: 0x17000751 RID: 1873
+		// (get) Token: 0x06002481 RID: 9345 RVA: 0x00086D94 File Offset: 0x00084F94
+		private static Hashtable Cache
+		{
+			get
+			{
+				object syncRoot = DigestClient.cache.SyncRoot;
+				lock (syncRoot)
+				{
+					DigestClient.CheckExpired(DigestClient.cache.Count);
+				}
+				return DigestClient.cache;
+			}
+		}
+
+		// Token: 0x06002482 RID: 9346 RVA: 0x00086DE8 File Offset: 0x00084FE8
+		private static void CheckExpired(int count)
+		{
+			if (count < 10)
+			{
+				return;
+			}
+			DateTime dateTime = DateTime.MaxValue;
+			DateTime utcNow = DateTime.UtcNow;
+			ArrayList arrayList = null;
+			foreach (object obj in DigestClient.cache.Keys)
+			{
+				int num = (int)obj;
+				DigestSession digestSession = (DigestSession)DigestClient.cache[num];
+				if (digestSession.LastUse < dateTime && (digestSession.LastUse - utcNow).Ticks > 6000000000L)
+				{
+					dateTime = digestSession.LastUse;
+					if (arrayList == null)
+					{
+						arrayList = new ArrayList();
+					}
+					arrayList.Add(num);
+				}
+			}
+			if (arrayList != null)
+			{
+				foreach (object obj2 in arrayList)
+				{
+					int num2 = (int)obj2;
+					DigestClient.cache.Remove(num2);
+				}
+			}
+		}
+
+		// Token: 0x06002483 RID: 9347 RVA: 0x00086F14 File Offset: 0x00085114
+		public Authorization Authenticate(string challenge, WebRequest webRequest, ICredentials credentials)
+		{
+			if (credentials == null || challenge == null)
+			{
+				return null;
+			}
+			if (challenge.Trim().ToLower().IndexOf("digest") == -1)
+			{
+				return null;
+			}
+			HttpWebRequest httpWebRequest = webRequest as HttpWebRequest;
+			if (httpWebRequest == null)
+			{
+				return null;
+			}
+			DigestSession digestSession = new DigestSession();
+			if (!digestSession.Parse(challenge))
+			{
+				return null;
+			}
+			int num = httpWebRequest.Address.GetHashCode() ^ credentials.GetHashCode() ^ digestSession.Nonce.GetHashCode();
+			DigestSession digestSession2 = (DigestSession)DigestClient.Cache[num];
+			bool flag = digestSession2 == null;
+			if (flag)
+			{
+				digestSession2 = digestSession;
+			}
+			else if (!digestSession2.Parse(challenge))
+			{
+				return null;
+			}
+			if (flag)
+			{
+				DigestClient.Cache.Add(num, digestSession2);
+			}
+			return digestSession2.Authenticate(webRequest, credentials);
+		}
+
+		// Token: 0x06002484 RID: 9348 RVA: 0x00086FCC File Offset: 0x000851CC
+		public Authorization PreAuthenticate(WebRequest webRequest, ICredentials credentials)
+		{
+			HttpWebRequest httpWebRequest = webRequest as HttpWebRequest;
+			if (httpWebRequest == null)
+			{
+				return null;
+			}
+			if (credentials == null)
+			{
+				return null;
+			}
+			int num = httpWebRequest.Address.GetHashCode() ^ credentials.GetHashCode();
+			DigestSession digestSession = (DigestSession)DigestClient.Cache[num];
+			if (digestSession == null)
+			{
+				return null;
+			}
+			return digestSession.Authenticate(webRequest, credentials);
+		}
+
+		// Token: 0x17000752 RID: 1874
+		// (get) Token: 0x06002485 RID: 9349 RVA: 0x00087020 File Offset: 0x00085220
+		public string AuthenticationType
+		{
+			get
+			{
+				return "Digest";
+			}
+		}
+
+		// Token: 0x17000753 RID: 1875
+		// (get) Token: 0x06002486 RID: 9350 RVA: 0x0000390E File Offset: 0x00001B0E
+		public bool CanPreAuthenticate
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04001551 RID: 5457
+		private static readonly Hashtable cache = Hashtable.Synchronized(new Hashtable());
+	}
+}

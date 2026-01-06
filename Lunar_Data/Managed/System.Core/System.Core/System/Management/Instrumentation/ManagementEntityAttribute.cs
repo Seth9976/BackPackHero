@@ -1,0 +1,67 @@
+﻿using System;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Management.Instrumentation
+{
+	/// <summary>The ManagementEntity attribute indicates that a class provides management information exposed through a WMI provider.</summary>
+	// Token: 0x02000380 RID: 896
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	public sealed class ManagementEntityAttribute : Attribute
+	{
+		/// <summary>Gets or sets a value that specifies whether the class represents a WMI class in a provider implemented external to the current assembly.</summary>
+		/// <returns>A boolean value that is true if the class represents an external WMI class and false otherwise.</returns>
+		// Token: 0x170004B7 RID: 1207
+		// (get) Token: 0x06001B0A RID: 6922 RVA: 0x0005A224 File Offset: 0x00058424
+		// (set) Token: 0x06001B0B RID: 6923 RVA: 0x0000235B File Offset: 0x0000055B
+		public bool External
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return default(bool);
+			}
+			set
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+			}
+		}
+
+		/// <summary>Gets or sets the name of the WMI class.</summary>
+		/// <returns>A string that contains the name of the WMI class.</returns>
+		// Token: 0x170004B8 RID: 1208
+		// (get) Token: 0x06001B0C RID: 6924 RVA: 0x0005A05A File Offset: 0x0005825A
+		// (set) Token: 0x06001B0D RID: 6925 RVA: 0x0000235B File Offset: 0x0000055B
+		public string Name
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return null;
+			}
+			set
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+			}
+		}
+
+		/// <summary>Specifies whether the associated class represents a singleton WMI class.</summary>
+		/// <returns>A boolean value that is true if the class represents a singleton WMI class and false otherwise.</returns>
+		// Token: 0x170004B9 RID: 1209
+		// (get) Token: 0x06001B0E RID: 6926 RVA: 0x0005A240 File Offset: 0x00058440
+		// (set) Token: 0x06001B0F RID: 6927 RVA: 0x0000235B File Offset: 0x0000055B
+		public bool Singleton
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return default(bool);
+			}
+			set
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+			}
+		}
+	}
+}

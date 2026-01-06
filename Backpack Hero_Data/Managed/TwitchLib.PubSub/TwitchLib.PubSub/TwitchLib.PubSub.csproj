@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8EE827D-841A-4CCA-86B3-51AD0355CCC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.PubSub</RootNamespace>
+    <AssemblyName>TwitchLib.PubSub</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="TwitchLib.Communication" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Helpers.cs" />
+    <Compile Include="Enums\AutomodQueueType.cs" />
+    <Compile Include="Enums\ChannelPointsChannelType.cs" />
+    <Compile Include="Enums\CommunityPointsChannelType.cs" />
+    <Compile Include="Enums\LeaderBoardType.cs" />
+    <Compile Include="Enums\PredictionStatus.cs" />
+    <Compile Include="Enums\PredictionType.cs" />
+    <Compile Include="Enums\PubSubRequestType.cs" />
+    <Compile Include="Enums\RaidType.cs" />
+    <Compile Include="Enums\SubscriptionPlan.cs" />
+    <Compile Include="Enums\UserModerationNotificationsType.cs" />
+    <Compile Include="Enums\VideoPlaybackType.cs" />
+    <Compile Include="Enums\WhisperType.cs" />
+    <Compile Include="Events\OnAutomodCaughtMessageArgs.cs" />
+    <Compile Include="Events\OnAutomodCaughtUserMessage.cs" />
+    <Compile Include="Events\OnBanArgs.cs" />
+    <Compile Include="Events\OnBitsReceivedArgs.cs" />
+    <Compile Include="Events\OnBitsReceivedV2Args.cs" />
+    <Compile Include="Events\OnChannelExtensionBroadcastArgs.cs" />
+    <Compile Include="Events\OnChannelPointsRewardRedeemedArgs.cs" />
+    <Compile Include="Events\OnChannelSubscriptionArgs.cs" />
+    <Compile Include="Events\OnClearArgs.cs" />
+    <Compile Include="Events\OnCommercialArgs.cs" />
+    <Compile Include="Events\OnCustomRewardCreatedArgs.cs" />
+    <Compile Include="Events\OnCustomRewardDeletedArgs.cs" />
+    <Compile Include="Events\OnCustomRewardUpdatedArgs.cs" />
+    <Compile Include="Events\OnEmoteOnlyArgs.cs" />
+    <Compile Include="Events\OnEmoteOnlyOffArgs.cs" />
+    <Compile Include="Events\OnFollowArgs.cs" />
+    <Compile Include="Events\OnHostArgs.cs" />
+    <Compile Include="Events\OnLeaderboardEventArgs.cs" />
+    <Compile Include="Events\OnListenResponseArgs.cs" />
+    <Compile Include="Events\OnLogArgs.cs" />
+    <Compile Include="Events\OnMessageDeletedArgs.cs" />
+    <Compile Include="Events\OnPredictionArgs.cs" />
+    <Compile Include="Events\OnPubSubServiceErrorArgs.cs" />
+    <Compile Include="Events\OnR9kBetaArgs.cs" />
+    <Compile Include="Events\OnR9kBetaOffArgs.cs" />
+    <Compile Include="Events\OnRaidGoArgs.cs" />
+    <Compile Include="Events\OnRaidUpdateArgs.cs" />
+    <Compile Include="Events\OnRaidUpdateV2Args.cs" />
+    <Compile Include="Events\OnRewardRedeemedArgs.cs" />
+    <Compile Include="Events\OnStreamDownArgs.cs" />
+    <Compile Include="Events\OnStreamUpArgs.cs" />
+    <Compile Include="Events\OnSubscribersOnlyArgs.cs" />
+    <Compile Include="Events\OnSubscribersOnlyOffArgs.cs" />
+    <Compile Include="Events\OnTimeoutArgs.cs" />
+    <Compile Include="Events\OnUnbanArgs.cs" />
+    <Compile Include="Events\OnUntimeoutArgs.cs" />
+    <Compile Include="Events\OnViewCountArgs.cs" />
+    <Compile Include="Events\OnWhisperArgs.cs" />
+    <Compile Include="Extensions\JSONObjectExtensions.cs" />
+    <Compile Include="Interfaces\ITwitchPubSub.cs" />
+    <Compile Include="Models\LeaderBoard.cs" />
+    <Compile Include="Models\Outcome.cs" />
+    <Compile Include="Models\PreviousRequest.cs" />
+    <Compile Include="Models\Responses\Message.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\Automod.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\AutomodCaughtMessage.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\Content.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\ContentClassification.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\Fragment.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\Message.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodCaughtMessage\Sender.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodQueue.cs" />
+    <Compile Include="Models\Responses\Messages\AutomodQueueData.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelBitsEvents.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelBitsEventsV2.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelExtensionBroadcast.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelPointsChannel.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelPointsData.cs" />
+    <Compile Include="Models\Responses\Messages\ChannelSubscription.cs" />
+    <Compile Include="Models\Responses\Messages\ChatModeratorActions.cs" />
+    <Compile Include="Models\Responses\Messages\CommunityPointsChannel.cs" />
+    <Compile Include="Models\Responses\Messages\Following.cs" />
+    <Compile Include="Models\Responses\Messages\LeaderboardEvents.cs" />
+    <Compile Include="Models\Responses\Messages\MessageData.cs" />
+    <Compile Include="Models\Responses\Messages\PredictionEvents.cs" />
+    <Compile Include="Models\Responses\Messages\RaidEvents.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\GlobalCooldown.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\MaxPerStream.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\MaxPerUserPerStream.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\Redemption.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\RedemptionImage.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\Reward.cs" />
+    <Compile Include="Models\Responses\Messages\Redemption\RewardRedeemed.cs" />
+    <Compile Include="Models\Responses\Messages\SubMessage.cs" />
+    <Compile Include="Models\Responses\Messages\User.cs" />
+    <Compile Include="Models\Responses\Messages\UserModerationNotificationsData.cs" />
+    <Compile Include="Models\Responses\Messages\UserModerationNotificationsTypes\AutomodCaughtMessage.cs" />
+    <Compile Include="Models\Responses\Messages\UserModerationNotifications\UserModerationNotifications.cs" />
+    <Compile Include="Models\Responses\Messages\VideoPlayback.cs" />
+    <Compile Include="Models\Responses\Messages\Whisper.cs" />
+    <Compile Include="Models\Responses\Response.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwitchPubSub.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

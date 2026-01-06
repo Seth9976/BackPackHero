@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{659EA97D-9BC7-4C58-946F-1F496589B7F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assembly-CSharp</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>..\..\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="com.fluid.dialogue">
+      <HintPath>..\..\com.fluid.dialogue.dll</HintPath>
+    </Reference>
+    <Reference Include="com.fluid.unity-event-plus">
+      <HintPath>..\..\com.fluid.unity-event-plus.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="ES3Assembly">
+      <HintPath>..\..\ES3Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleAssemblies">
+      <HintPath>..\..\SimpleAssemblies.dll</HintPath>
+    </Reference>
+    <Reference Include="StbImageSharp">
+      <HintPath>..\..\StbImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api">
+      <HintPath>..\..\TwitchLib.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Core.Interfaces">
+      <HintPath>..\..\TwitchLib.Api.Core.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Helix">
+      <HintPath>..\..\TwitchLib.Api.Helix.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Api.Helix.Models">
+      <HintPath>..\..\TwitchLib.Api.Helix.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Client">
+      <HintPath>..\..\TwitchLib.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Client.Enums">
+      <HintPath>..\..\TwitchLib.Client.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Client.Models">
+      <HintPath>..\..\TwitchLib.Client.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitchLib.Communication">
+      <HintPath>..\..\TwitchLib.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras">
+      <HintPath>..\..\Unity.2D.Tilemap.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>..\..\Unity.Services.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptOneOfAKindItem.cs" />
+    <Compile Include="AchievementAbstractor.cs" />
+    <Compile Include="AchivementUnlocker.cs" />
+    <Compile Include="ActionButtonManager.cs" />
+    <Compile Include="AddMission.cs" />
+    <Compile Include="AnalyticsManager.cs" />
+    <Compile Include="AnalyticsMenuManager.cs" />
+    <Compile Include="AnimatedHighlight.cs" />
+    <Compile Include="AnimationEvent.cs" />
+    <Compile Include="ArrowTutorialManager.cs" />
+    <Compile Include="AtlasParent.cs" />
+    <Compile Include="AutoAchievement.cs" />
+    <Compile Include="BackgroundController.cs" />
+    <Compile Include="BasicPopUp.cs" />
+    <Compile Include="BootGame.cs" />
+    <Compile Include="BootHelper.cs" />
+    <Compile Include="BugReporter.cs" />
+    <Compile Include="Building_Exists_Handler.cs" />
+    <Compile Include="BuildNPCsUIList.cs" />
+    <Compile Include="CantFilp.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardEffectProperty.cs" />
+    <Compile Include="CardManager.cs" />
+    <Compile Include="Carving.cs" />
+    <Compile Include="CenterDropDownOnButton.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="CharacterSelectionCharacter.cs" />
+    <Compile Include="Chatter.cs" />
+    <Compile Include="CheckForAnyItemGiven.cs" />
+    <Compile Include="CheckForCostumeUnlocked.cs" />
+    <Compile Include="CheckForItemInDungeon.cs" />
+    <Compile Include="CheckForItemReceived.cs" />
+    <Compile Include="CheckForItemsOfTypeFromLastRun.cs" />
+    <Compile Include="CheckForItemTypeReceived.cs" />
+    <Compile Include="CheckForLastRunResult.cs" />
+    <Compile Include="CheckForLoreItemUpdated.cs" />
+    <Compile Include="CheckForLoreUnlocked.cs" />
+    <Compile Include="CheckForMetaProgressMarker.cs" />
+    <Compile Include="CheckForMissions.cs" />
+    <Compile Include="CheckForNumberOfItems.cs" />
+    <Compile Include="CheckForProgressInInterface.cs" />
+    <Compile Include="CheckForResources.cs" />
+    <Compile Include="CheckForSpecificItemsFromLastRun.cs" />
+    <Compile Include="CheckForTooManyLoops.cs" />
+    <Compile Include="CheckIfBuildingExists.cs" />
+    <Compile Include="CheckSurroundings.cs" />
+    <Compile Include="CheckSurroundingsNPCs.cs" />
+    <Compile Include="Chest.cs" />
+    <Compile Include="ChestForLimitedItemGet.cs" />
+    <Compile Include="ChestPouch.cs" />
+    <Compile Include="CircleRenderer.cs" />
+    <Compile Include="CloseOnEscape.cs" />
+    <Compile Include="CombatPet.cs" />
+    <Compile Include="ConditionalEffect.cs" />
+    <Compile Include="ConditionalItemSpawn.cs" />
+    <Compile Include="Confirm.cs" />
+    <Compile Include="ConfirmationManager.cs" />
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="ContextControlsDisplay.cs" />
+    <Compile Include="ContextMenu.cs" />
+    <Compile Include="ContextMenuButton.cs" />
+    <Compile Include="ContextMenuManager.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="ControllerIcon.cs" />
+    <Compile Include="ConversationLauncher.cs" />
+    <Compile Include="ConversationText.cs" />
+    <Compile Include="CostumeNumber.cs" />
+    <Compile Include="CostumeSelector.cs" />
+    <Compile Include="Counter.cs" />
+    <Compile Include="CR8Manager.cs" />
+    <Compile Include="CramButton.cs" />
+    <Compile Include="CreateDoor.cs" />
+    <Compile Include="CreateMenu.cs" />
+    <Compile Include="Credits.cs" />
+    <Compile Include="CreditsParadeMember.cs" />
+    <Compile Include="CreditsScroll.cs" />
+    <Compile Include="Curse.cs" />
+    <Compile Include="CurseManager.cs" />
+    <Compile Include="CustomDescriptions.cs" />
+    <Compile Include="CustomEvent.cs" />
+    <Compile Include="CustomInputHandler.cs" />
+    <Compile Include="DebugItemManager.cs" />
+    <Compile Include="DebugMenu.cs" />
+    <Compile Include="DeckButton.cs" />
+    <Compile Include="DeselectText.cs" />
+    <Compile Include="DestroyIfGameObjectDisabled.cs" />
+    <Compile Include="DestroyIfOffScreen.cs" />
+    <Compile Include="DestroyItem.cs" />
+    <Compile Include="DevPunksSaveGame\AchievementIds.cs" />
+    <Compile Include="DevPunksSaveGame\AchievementsConfig.cs" />
+    <Compile Include="DevPunksSaveGame\AchievementService.cs" />
+    <Compile Include="DevPunksSaveGame\ConsoleWrapper.cs" />
+    <Compile Include="DevPunksSaveGame\DevPunks.cs" />
+    <Compile Include="DevPunksSaveGame\DummyAchievements.cs" />
+    <Compile Include="DevPunksSaveGame\Interfaces\AchievementInterface.cs" />
+    <Compile Include="DevPunksSaveGame\Interfaces\EFileResult.cs" />
+    <Compile Include="DevPunksSaveGame\Interfaces\FileInterface.cs" />
+    <Compile Include="DevPunksSaveGame\Interfaces\IOnlineInterface.cs" />
+    <Compile Include="DevPunksSaveGame\Interfaces\SaveFileEntry.cs" />
+    <Compile Include="DevPunksSaveGame\PCFile.cs" />
+    <Compile Include="DigitalCursor.cs" />
+    <Compile Include="DigitalCursorInterface.cs" />
+    <Compile Include="DigitalCursorSelectOnEnable.cs" />
+    <Compile Include="DigitalInputSelectOnButton.cs" />
+    <Compile Include="DisableWaterTile.cs" />
+    <Compile Include="DocsGenerator.cs" />
+    <Compile Include="DoomRoomBlock.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="DragCollider.cs" />
+    <Compile Include="DraggableCombat.cs" />
+    <Compile Include="DungeonEvent.cs" />
+    <Compile Include="DungeonEventSpecial.cs" />
+    <Compile Include="DungeonLevel.cs" />
+    <Compile Include="DungeonPlaceholder.cs" />
+    <Compile Include="DungeonPlayer.cs" />
+    <Compile Include="DungeonRoom.cs" />
+    <Compile Include="DungeonRoomSelector.cs" />
+    <Compile Include="DungeonShambler.cs" />
+    <Compile Include="DungeonSpawner.cs" />
+    <Compile Include="EarlyAccessManager.cs" />
+    <Compile Include="EffectParticleSystem.cs" />
+    <Compile Include="EnableAnimatorAfterDelay.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="EnemyActionPreview.cs" />
+    <Compile Include="EnergyBall.cs" />
+    <Compile Include="EnergyEmitter.cs" />
+    <Compile Include="EOSAchievementManager.cs" />
+    <Compile Include="ES3Types\ES3UserType_AnimationEvent.cs" />
+    <Compile Include="ES3Types\ES3UserType_AnimationEventArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Carving.cs" />
+    <Compile Include="ES3Types\ES3UserType_CarvingArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_CircleCollider2D.cs" />
+    <Compile Include="ES3Types\ES3UserType_CircleCollider2DArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_CircleRenderer.cs" />
+    <Compile Include="ES3Types\ES3UserType_CircleRendererArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Curse.cs" />
+    <Compile Include="ES3Types\ES3UserType_CurseArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_CustomDescriptions.cs" />
+    <Compile Include="ES3Types\ES3UserType_CustomDescriptionsArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DisableWaterTile.cs" />
+    <Compile Include="ES3Types\ES3UserType_DisableWaterTileArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DragCollider.cs" />
+    <Compile Include="ES3Types\ES3UserType_DragColliderArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonEvent.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonEventArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonPlayer.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonPlayerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonRoom.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonRoomArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonRoomSelector.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonRoomSelectorArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonShambler.cs" />
+    <Compile Include="ES3Types\ES3UserType_DungeonShamblerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_EnergyEmitter.cs" />
+    <Compile Include="ES3Types\ES3UserType_EnergyEmitterArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_FlowerWobble.cs" />
+    <Compile Include="ES3Types\ES3UserType_FlowerWobbleArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_GridSquare.cs" />
+    <Compile Include="ES3Types\ES3UserType_GridSquareArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Item2.cs" />
+    <Compile Include="ES3Types\ES3UserType_Item2Array.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemBorderBackground.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemBorderBackgroundArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemMovement.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemMovementArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemPouch.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemPouchArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemSpriteChanger.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemSpriteChangerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemSwitcher.cs" />
+    <Compile Include="ES3Types\ES3UserType_ItemSwitcherArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ManaStone.cs" />
+    <Compile Include="ES3Types\ES3UserType_ManaStoneArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Missions.cs" />
+    <Compile Include="ES3Types\ES3UserType_MissionsArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ModdedItem.cs" />
+    <Compile Include="ES3Types\ES3UserType_ModularBackpack.cs" />
+    <Compile Include="ES3Types\ES3UserType_ModularBackpackArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_BuildingInterfaceLauncher.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_BuildingInterfaceLauncherArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Chest.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_ChestArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Interactable.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_InteractableArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_OVerworld_NPCDestination.cs" />
+    <Compile Include="ES3Types\ES3UserType_OVerworld_NPCDestinationArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_NPC_Spawner.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_NPC_SpawnerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Podium.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_PodiumArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_ShopKeeper.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_ShopKeeperArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Structure.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_StructureArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Z_Positioner.cs" />
+    <Compile Include="ES3Types\ES3UserType_Overworld_Z_PositionerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ParticleSystem.cs" />
+    <Compile Include="ES3Types\ES3UserType_ParticleSystemArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetItem.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetItem2.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetItem2Array.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetItemArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetMaster.cs" />
+    <Compile Include="ES3Types\ES3UserType_PetMasterArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_PlayerStatTracking.cs" />
+    <Compile Include="ES3Types\ES3UserType_PlayerStatTrackingArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_RunType.cs" />
+    <Compile Include="ES3Types\ES3UserType_RunTypeArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_RunTypeManager.cs" />
+    <Compile Include="ES3Types\ES3UserType_RunTypeManagerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ScriptedTrigger.cs" />
+    <Compile Include="ES3Types\ES3UserType_ScriptedTriggerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SlidingRune.cs" />
+    <Compile Include="ES3Types\ES3UserType_SlidingRuneArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SlidingRuneButton.cs" />
+    <Compile Include="ES3Types\ES3UserType_SlidingRuneButtonArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemCleansingFlame.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemCleansingFlameArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemCram.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemCramArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemDoublePoison.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemDoublePoisonArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_specialItemPochette.cs" />
+    <Compile Include="ES3Types\ES3UserType_specialItemPochetteArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemRemoveStatusEffects.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemRemoveStatusEffectsArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemSpawn.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemSpawnArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemTote.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemToteArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemUnique.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecialItemUniqueArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecificConditionToUse.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpecificConditionToUseArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpriteMask.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpriteMaskArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpriteRenderer.cs" />
+    <Compile Include="ES3Types\ES3UserType_SpriteRendererArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_StackableItem.cs" />
+    <Compile Include="ES3Types\ES3UserType_StackableItemArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_TextMeshPro.cs" />
+    <Compile Include="ES3Types\ES3UserType_TextMeshProArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ValueChanger.cs" />
+    <Compile Include="ES3Types\ES3UserType_ValueChangerArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_ValueChangerEx.cs" />
+    <Compile Include="ES3Types\ES3UserType_ValueChangerExArray.cs" />
+    <Compile Include="ES3Types\ES3UserType_VisualEffectOnItemUse.cs" />
+    <Compile Include="ES3Types\ES3UserType_VisualEffectOnItemUseArray.cs" />
+    <Compile Include="EventButton.cs" />
+    <Compile Include="EventDependent.cs" />
+    <Compile Include="EventLocksDungeonMovement.cs" />
+    <Compile Include="EventManager.cs" />
+    <Compile Include="EventNPC.cs" />
+    <Compile Include="ExplanationGroup.cs" />
+    <Compile Include="ExtensionMethod.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
+    <Compile Include="FadeOnDistance.cs" />
+    <Compile Include="FakeGold.cs" />
+    <Compile Include="FindCanvas.cs" />
+    <Compile Include="FlowerWobble.cs" />
+    <Compile Include="FollowObjectCamera.cs" />
+    <Compile Include="GameFlowManager.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="GenericUser.cs" />
+    <Compile Include="GetAchievement.cs" />
+    <Compile Include="GetTimeLeft.cs" />
+    <Compile Include="GiveItem.cs" />
+    <Compile Include="GiveResourceAction.cs" />
+    <Compile Include="Gold.cs" />
+    <Compile Include="GridBlock.cs" />
+    <Compile Include="GridExtension.cs" />
+    <Compile Include="GridObject.cs" />
+    <Compile Include="GridParent.cs" />
+    <Compile Include="GridSquare.cs" />
+    <Compile Include="GridTester.cs" />
+    <Compile Include="HazardManager.cs" />
+    <Compile Include="HideInputHandlerOnSingleUI.cs" />
+    <Compile Include="HideOnBuildMode.cs" />
+    <Compile Include="HideOnSingleUI.cs" />
+    <Compile Include="HideScrollBar.cs" />
+    <Compile Include="HighlightText.cs" />
+    <Compile Include="HoldToSkip.cs" />
+    <Compile Include="InputHandler.cs" />
+    <Compile Include="InteractiveDungeonItem.cs" />
+    <Compile Include="InteractWithCustomEventInDungeon.cs" />
+    <Compile Include="InteractWithDungeonItem.cs" />
+    <Compile Include="InventoryScaler.cs" />
+    <Compile Include="Item2.cs" />
+    <Compile Include="ItemAnimationProxy.cs" />
+    <Compile Include="ItemAtlas.cs" />
+    <Compile Include="ItemAtlasButton.cs" />
+    <Compile Include="ItemBorderBackground.cs" />
+    <Compile Include="ItemExporter.cs" />
+    <Compile Include="ItemMovement.cs" />
+    <Compile Include="ItemMovementManager.cs" />
+    <Compile Include="ItemPouch.cs" />
+    <Compile Include="ItemPouchMaster.cs" />
+    <Compile Include="ItemShaderManager.cs" />
+    <Compile Include="ItemsHeld.cs" />
+    <Compile Include="ItemSlot.cs" />
+    <Compile Include="ItemSpawner.cs" />
+    <Compile Include="ItemSpawnMenu.cs" />
+    <Compile Include="ItemSpawnMenuButton.cs" />
+    <Compile Include="ItemSpriteChanger.cs" />
+    <Compile Include="ItemStorage.cs" />
+    <Compile Include="ItemSwitcher.cs" />
+    <Compile Include="ItemTogglerForController.cs" />
+    <Compile Include="KeepAsLastSibling.cs" />
+    <Compile Include="KeepOnLayer.cs" />
+    <Compile Include="KeepYPosition.cs" />
+    <Compile Include="LadyLuckMaster.cs" />
+    <Compile Include="LangaugeManager.cs" />
+    <Compile Include="LayeredSong.cs" />
+    <Compile Include="LevelUpManager.cs" />
+    <Compile Include="LightFlicker.cs" />
+    <Compile Include="LoadingText.cs" />
+    <Compile Include="LoadStoryGame.cs" />
+    <Compile Include="LoadTutorial.cs" />
+    <Compile Include="Locket.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Lore.cs" />
+    <Compile Include="LoreUnlocker.cs" />
+    <Compile Include="MainMenuItem.cs" />
+    <Compile Include="MainMenuPhysics.cs" />
+    <Compile Include="ManaFlow.cs" />
+    <Compile Include="ManaStone.cs" />
+    <Compile Include="MapManager.cs" />
+    <Compile Include="Match2Card.cs" />
+    <Compile Include="Match2CardMaster.cs" />
+    <Compile Include="MatchCanvasGroupAlpha.cs" />
+    <Compile Include="MatchMenuAlpha.cs" />
+    <Compile Include="MenuDragger.cs" />
+    <Compile Include="MenuManager.cs" />
+    <Compile Include="MenuPhysicsObjects.cs" />
+    <Compile Include="MessageManager.cs" />
+    <Compile Include="MetaProgressDungeonSpawner.cs" />
+    <Compile Include="MetaProgressHandler.cs" />
+    <Compile Include="MetaProgressSaveManager.cs" />
+    <Compile Include="Missions.cs" />
+    <Compile Include="ModdedItem.cs" />
+    <Compile Include="ModItemLoader.cs" />
+    <Compile Include="ModLoader.cs" />
+    <Compile Include="ModLog.cs" />
+    <Compile Include="ModLogEntry.cs" />
+    <Compile Include="ModMetaSave.cs" />
+    <Compile Include="ModpackInfoDisplay.cs" />
+    <Compile Include="ModSelection.cs" />
+    <Compile Include="ModTextGen.cs" />
+    <Compile Include="ModularBackpack.cs" />
+    <Compile Include="ModUtils.cs" />
+    <Compile Include="MoveTowards.cs" />
+    <Compile Include="NavMoveCapturer.cs" />
+    <Compile Include="NewCharacterSelector.cs" />
+    <Compile Include="NewItemWindow.cs" />
+    <Compile Include="NewUnlockManager.cs" />
+    <Compile Include="npcOutfit.cs" />
+    <Compile Include="OnCloseEvent.cs" />
+    <Compile Include="OnControllerSwitchEvent.cs" />
+    <Compile Include="OnMessageReceivedDelegate.cs" />
+    <Compile Include="OnPollEndDelegate.cs" />
+    <Compile Include="OnStartAction.cs" />
+    <Compile Include="OnVotedDelegate.cs" />
+    <Compile Include="OpenInventoryAction.cs" />
+    <Compile Include="OpenKeyboard.cs" />
+    <Compile Include="OpenShopAction.cs" />
+    <Compile Include="OpenURL.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="OptionsSaveManager.cs" />
+    <Compile Include="OverworldInventory.cs" />
+    <Compile Include="OverworldTarget.cs" />
+    <Compile Include="OverworldTutorials.cs" />
+    <Compile Include="Overworld_Animations_Manager.cs" />
+    <Compile Include="Overworld_Building.cs" />
+    <Compile Include="Overworld_BuildingInterface.cs" />
+    <Compile Include="Overworld_BuildingInterfaceLauncher.cs" />
+    <Compile Include="Overworld_BuildingList.cs" />
+    <Compile Include="Overworld_BuildingManager.cs" />
+    <Compile Include="Overworld_Button.cs" />
+    <Compile Include="Overworld_ButtonGroup.cs" />
+    <Compile Include="Overworld_CardManager.cs" />
+    <Compile Include="Overworld_Chest.cs" />
+    <Compile Include="Overworld_ConversationButton.cs" />
+    <Compile Include="Overworld_ConversationManager.cs" />
+    <Compile Include="Overworld_FollowAStarPath.cs" />
+    <Compile Include="Overworld_FollowPath.cs" />
+    <Compile Include="Overworld_Generator.cs" />
+    <Compile Include="Overworld_GiftReceiver.cs" />
+    <Compile Include="Overworld_Interactable.cs" />
+    <Compile Include="Overworld_InteractiveObject.cs" />
+    <Compile Include="Overworld_InventoryItemButton.cs" />
+    <Compile Include="Overworld_InventoryManager.cs" />
+    <Compile Include="Overworld_Item.cs" />
+    <Compile Include="Overworld_ItemsList.cs" />
+    <Compile Include="Overworld_Manager.cs" />
+    <Compile Include="Overworld_NPC.cs" />
+    <Compile Include="OVerworld_NPCDestination.cs" />
+    <Compile Include="OVerworld_NPCManager.cs" />
+    <Compile Include="Overworld_NPC_CostumeSelector.cs" />
+    <Compile Include="Overworld_NPC_Spawner.cs" />
+    <Compile Include="Overworld_NPC_UI_Button.cs" />
+    <Compile Include="Overworld_ParticleManager.cs" />
+    <Compile Include="Overworld_Podium.cs" />
+    <Compile Include="Overworld_Purse.cs" />
+    <Compile Include="Overworld_ResourceDisplay.cs" />
+    <Compile Include="Overworld_ResourceDisplayPanel.cs" />
+    <Compile Include="Overworld_ResourceManager.cs" />
+    <Compile Include="Overworld_RunManager.cs" />
+    <Compile Include="Overworld_SaveManager.cs" />
+    <Compile Include="Overworld_ShopKeeper.cs" />
+    <Compile Include="Overworld_Structure.cs" />
+    <Compile Include="Overworld_TileManager.cs" />
+    <Compile Include="Overworld_Z_Positioner.cs" />
+    <Compile Include="Parcel.cs" />
+    <Compile Include="ParticlesFollowSpriteRendererLayer.cs" />
+    <Compile Include="PathFinding.cs" />
+    <Compile Include="PauseMenu.cs" />
+    <Compile Include="PaxOptions.cs" />
+    <Compile Include="PerformSpecialAction.cs" />
+    <Compile Include="PetEffect.cs" />
+    <Compile Include="PetItem.cs" />
+    <Compile Include="PetItem2.cs" />
+    <Compile Include="PetManager.cs" />
+    <Compile Include="PetMaster.cs" />
+    <Compile Include="PetPlacementIcon.cs" />
+    <Compile Include="PetProperties.cs" />
+    <Compile Include="PixelPefectCanvas.cs" />
+    <Compile Include="PixelZoomer.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="PlatformExcluder.cs" />
+    <Compile Include="PlatformSpecificNavigation.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerStatsDisplay.cs" />
+    <Compile Include="PlayerStatTracking.cs" />
+    <Compile Include="PlayingClip.cs" />
+    <Compile Include="PlaySFX.cs" />
+    <Compile Include="PlinkoBall.cs" />
+    <Compile Include="PlinkoMaster.cs" />
+    <Compile Include="PocketManager.cs" />
+    <Compile Include="PollOption.cs" />
+    <Compile Include="PollStatus.cs" />
+    <Compile Include="PopUp.cs" />
+    <Compile Include="PopUpManager.cs" />
+    <Compile Include="PositionEvent.cs" />
+    <Compile Include="PradaDefeated.cs" />
+    <Compile Include="PrebuilderInterface.cs" />
+    <Compile Include="PrefabSpawner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyText.cs" />
+    <Compile Include="PulseImage.cs" />
+    <Compile Include="RaidManager.cs" />
+    <Compile Include="RandomEventMaster.cs" />
+    <Compile Include="RandomizeAnimation.cs" />
+    <Compile Include="ReplacementText.cs" />
+    <Compile Include="ReplaceTextAction.cs" />
+    <Compile Include="ResearchList.cs" />
+    <Compile Include="ResearchUnlockBar.cs" />
+    <Compile Include="ResearchUnlockBarCost.cs" />
+    <Compile Include="ResetLoops.cs" />
+    <Compile Include="ResourceGainedManager.cs" />
+    <Compile Include="ResourceGainedPanel.cs" />
+    <Compile Include="RightJoystickScroll.cs" />
+    <Compile Include="RunTallyer.cs" />
+    <Compile Include="RunType.cs" />
+    <Compile Include="RunTypeButton.cs" />
+    <Compile Include="RunTypeManager.cs" />
+    <Compile Include="RunTypeSelector.cs" />
+    <Compile Include="Satchel.cs" />
+    <Compile Include="SatchelEvent.cs" />
+    <Compile Include="SaveAnItemOnLoss.cs" />
+    <Compile Include="SaveDataNintendo.cs" />
+    <Compile Include="SaveIncrementer.cs" />
+    <Compile Include="SaveManager.cs" />
+    <Compile Include="SaveMenuManager.cs" />
+    <Compile Include="SaveSlot.cs" />
+    <Compile Include="ScavengerMaster.cs" />
+    <Compile Include="ScavengerResults.cs" />
+    <Compile Include="SceneLoader.cs" />
+    <Compile Include="Screenshotter.cs" />
+    <Compile Include="ScriptedTrigger.cs" />
+    <Compile Include="ScrollCard.cs" />
+    <Compile Include="ScrollRectController.cs" />
+    <Compile Include="SelectItemDialogue.cs" />
+    <Compile Include="SellingTile.cs" />
+    <Compile Include="SetMetaProgressMarker.cs" />
+    <Compile Include="SetupScrollExplicit.cs" />
+    <Compile Include="SetYPosition.cs" />
+    <Compile Include="SFXLayer.cs" />
+    <Compile Include="ShowEmojiAnimation.cs" />
+    <Compile Include="ShowSimpleUnlock.cs" />
+    <Compile Include="SimpleClickItem.cs" />
+    <Compile Include="SimpleHoverText.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SingleUI.cs" />
+    <Compile Include="SlidingRune.cs" />
+    <Compile Include="SlidingRuneButton.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="SpecialItem.cs" />
+    <Compile Include="SpecialItemCleansingFlame.cs" />
+    <Compile Include="SpecialItemCram.cs" />
+    <Compile Include="SpecialItemDoublePoison.cs" />
+    <Compile Include="SpecialItemMontoyaBlade.cs" />
+    <Compile Include="specialItemPochette.cs" />
+    <Compile Include="SpecialItemRemoveStatusEffects.cs" />
+    <Compile Include="SpecialItemSpawn.cs" />
+    <Compile Include="SpecialItemTote.cs" />
+    <Compile Include="SpecialItemUnique.cs" />
+    <Compile Include="SpecificConditionToUse.cs" />
+    <Compile Include="SplashParticles.cs" />
+    <Compile Include="SpriteExporter.cs" />
+    <Compile Include="StackableItem.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="StatusEffect.cs" />
+    <Compile Include="StayOnScreen.cs" />
+    <Compile Include="SteamManager.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="StoreAtlas.cs" />
+    <Compile Include="SwapButton.cs" />
+    <Compile Include="SymbolSpecificNavigation.cs" />
+    <Compile Include="TextAppearsOneLetter.cs" />
+    <Compile Include="TextArea.cs" />
+    <Compile Include="TextEffect.cs" />
+    <Compile Include="TextScroller.cs" />
+    <Compile Include="ThankYouManager.cs" />
+    <Compile Include="TilemapCustomSaver.cs" />
+    <Compile Include="Tiler.cs" />
+    <Compile Include="TimeLeft.cs" />
+    <Compile Include="ToggleInputHandler.cs" />
+    <Compile Include="ToggleRule.cs" />
+    <Compile Include="TooManySavesBox.cs" />
+    <Compile Include="TopButtons.cs" />
+    <Compile Include="Tote.cs" />
+    <Compile Include="TownHallButton.cs" />
+    <Compile Include="Tutorial.cs" />
+    <Compile Include="TutorialManager.cs" />
+    <Compile Include="TutorialPopUpManager.cs" />
+    <Compile Include="TwitchCanvasManager.cs" />
+    <Compile Include="TwitchChat.cs" />
+    <Compile Include="TwitchChatterList.cs" />
+    <Compile Include="TwitchDeathCounter.cs" />
+    <Compile Include="TwitchEmoteManager.cs" />
+    <Compile Include="TwitchManager.cs" />
+    <Compile Include="TwitchMenu.cs" />
+    <Compile Include="TwitchOptionDisplay.cs" />
+    <Compile Include="TwitchPoll.cs" />
+    <Compile Include="TwitchPollManager.cs" />
+    <Compile Include="TwitchTokenHTTPServer.cs" />
+    <Compile Include="UICarvingIndicator.cs" />
+    <Compile Include="UICarvingSpacer.cs" />
+    <Compile Include="UICarvingSpacerMaster.cs" />
+    <Compile Include="Unity\Services\Analytics\AnalyticsEventHandler.cs" />
+    <Compile Include="Unity\Services\Analytics\CustomEventSample.cs" />
+    <Compile Include="Unity\Services\Analytics\StandardEventSample.cs" />
+    <Compile Include="UnlockItem.cs" />
+    <Compile Include="UnlockLore.cs" />
+    <Compile Include="UserManager.cs" />
+    <Compile Include="ValueChanger.cs" />
+    <Compile Include="ValueChangerEx.cs" />
+    <Compile Include="VisionSprite.cs" />
+    <Compile Include="VisualEffectOnItemUse.cs" />
+    <Compile Include="WheelMaster.cs" />
+    <Compile Include="WheelSlice.cs" />
+    <Compile Include="WorkshopModpack.cs" />
+    <Compile Include="WorkshopWizard.cs" />
+    <Compile Include="WorldFitterToCamera.cs" />
+    <Compile Include="XGameSaveWrapper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

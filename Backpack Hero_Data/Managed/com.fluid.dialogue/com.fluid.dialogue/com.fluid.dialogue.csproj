@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEE68F87-E478-47DE-B0C8-BEFF794CFA0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CleverCrow.Fluid.Dialogues</RootNamespace>
+    <AssemblyName>com.fluid.dialogue</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.fluid.database">
+      <HintPath>..\..\com.fluid.database.dll</HintPath>
+    </Reference>
+    <Reference Include="com.fluid.simple-singleton">
+      <HintPath>..\..\com.fluid.simple-singleton.dll</HintPath>
+    </Reference>
+    <Reference Include="com.fluid.unity-event-plus">
+      <HintPath>..\..\com.fluid.unity-event-plus.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionDataBase.cs" />
+    <Compile Include="Actions\ActionRuntime.cs" />
+    <Compile Include="Actions\ActionStatus.cs" />
+    <Compile Include="Actions\Databases\ConditionBoolInternal.cs" />
+    <Compile Include="Actions\Databases\ConditionFloatInternal.cs" />
+    <Compile Include="Actions\Databases\ConditionIntInternal.cs" />
+    <Compile Include="Actions\Databases\ConditionLocalFloat.cs" />
+    <Compile Include="Actions\Databases\ConditionStringInternal.cs" />
+    <Compile Include="Actions\Databases\IsBoolBase.cs" />
+    <Compile Include="Actions\Databases\IsFloatBase.cs" />
+    <Compile Include="Actions\Databases\IsIntBase.cs" />
+    <Compile Include="Actions\Databases\IsLocalBool.cs" />
+    <Compile Include="Actions\Databases\IsLocalInt.cs" />
+    <Compile Include="Actions\Databases\IsLocalString.cs" />
+    <Compile Include="Actions\Databases\IsStringBase.cs" />
+    <Compile Include="Actions\Databases\NumberComparison.cs" />
+    <Compile Include="Actions\Databases\SetGlobalBool.cs" />
+    <Compile Include="Actions\Databases\SetGlobalFloat.cs" />
+    <Compile Include="Actions\Databases\SetGlobalInt.cs" />
+    <Compile Include="Actions\Databases\SetGlobalString.cs" />
+    <Compile Include="Actions\Databases\SetKeyValueInternal.cs" />
+    <Compile Include="Actions\Databases\SetLocalBool.cs" />
+    <Compile Include="Actions\Databases\SetLocalFloat.cs" />
+    <Compile Include="Actions\Databases\SetLocalInt.cs" />
+    <Compile Include="Actions\Databases\SetLocalString.cs" />
+    <Compile Include="Actions\Databases\SetLocalVariableBase.cs" />
+    <Compile Include="Actions\GameObjects\GameObjectWrapper.cs" />
+    <Compile Include="Actions\GameObjects\IGameObjectWrapper.cs" />
+    <Compile Include="Actions\GameObjects\SetActive.cs" />
+    <Compile Include="Actions\GameObjects\SetActiveInternal.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Actions\IActionData.cs" />
+    <Compile Include="ActorDefinition.cs" />
+    <Compile Include="Choices\ChoiceData.cs" />
+    <Compile Include="Choices\ChoiceRuntime.cs" />
+    <Compile Include="Choices\IChoice.cs" />
+    <Compile Include="Conditions\ConditionDataBase.cs" />
+    <Compile Include="Conditions\ConditionRuntime.cs" />
+    <Compile Include="Conditions\Databases\IsGlobalBool.cs" />
+    <Compile Include="Conditions\Databases\IsGlobalFloat.cs" />
+    <Compile Include="Conditions\Databases\IsGlobalInt.cs" />
+    <Compile Include="Conditions\Databases\IsGlobalString.cs" />
+    <Compile Include="Conditions\ICondition.cs" />
+    <Compile Include="Conditions\IConditionData.cs" />
+    <Compile Include="CreateMenuAttribute.cs" />
+    <Compile Include="DatabaseInstanceExtended.cs" />
+    <Compile Include="DialogueController.cs" />
+    <Compile Include="DialogueEvents.cs" />
+    <Compile Include="DialoguePlayback.cs" />
+    <Compile Include="GameObjectOverride.cs" />
+    <Compile Include="GameObjectVariables\KeyValueDefinitionGameObject.cs" />
+    <Compile Include="Graphs\DialogueGraph.cs" />
+    <Compile Include="Graphs\GraphRuntime.cs" />
+    <Compile Include="Graphs\IGraph.cs" />
+    <Compile Include="Graphs\IGraphData.cs" />
+    <Compile Include="IActor.cs" />
+    <Compile Include="IDatabaseInstanceExtended.cs" />
+    <Compile Include="IDialogueController.cs" />
+    <Compile Include="IDialogueEvents.cs" />
+    <Compile Include="IDialoguePlayback.cs" />
+    <Compile Include="IGameObjectOverride.cs" />
+    <Compile Include="IGetRuntime.cs" />
+    <Compile Include="ISetup.cs" />
+    <Compile Include="IUniqueId.cs" />
+    <Compile Include="KeyValueDataGameObject.cs" />
+    <Compile Include="Nodes\IConnectionChildCollection.cs" />
+    <Compile Include="Nodes\INode.cs" />
+    <Compile Include="Nodes\INodeData.cs" />
+    <Compile Include="Nodes\NodeBase.cs" />
+    <Compile Include="Nodes\NodeChoiceHub.cs" />
+    <Compile Include="Nodes\NodeChoiceHubData.cs" />
+    <Compile Include="Nodes\NodeDataBase.cs" />
+    <Compile Include="Nodes\NodeDataChoiceBase.cs" />
+    <Compile Include="Nodes\NodeDialogue.cs" />
+    <Compile Include="Nodes\NodeDialogueData.cs" />
+    <Compile Include="Nodes\NodeDice.cs" />
+    <Compile Include="Nodes\NodeDiceData.cs" />
+    <Compile Include="Nodes\NodeHub.cs" />
+    <Compile Include="Nodes\NodeHubData.cs" />
+    <Compile Include="Nodes\NodeLink.cs" />
+    <Compile Include="Nodes\NodeLinkData.cs" />
+    <Compile Include="Nodes\NodeNestedDataBase.cs" />
+    <Compile Include="Nodes\NodePlayGraphData.cs" />
+    <Compile Include="Nodes\NodeRoot.cs" />
+    <Compile Include="Nodes\NodeRootData.cs" />
+    <Compile Include="Nodes\PlayGraph\NodePlayGraph.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

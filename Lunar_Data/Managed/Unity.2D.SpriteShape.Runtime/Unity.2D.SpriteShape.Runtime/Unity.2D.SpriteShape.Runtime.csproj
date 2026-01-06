@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F6EDBEE-8068-489C-BC1B-DF026022669E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.2D.SpriteShape.Runtime</RootNamespace>
+    <AssemblyName>Unity.2D.SpriteShape.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>..\..\Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpriteShapeGeometryCache.cs" />
+    <Compile Include="SpriteShapeGeometryInfo.cs" />
+    <Compile Include="UnityEngine\U2D\AngleRange.cs" />
+    <Compile Include="UnityEngine\U2D\BezierUtility.cs" />
+    <Compile Include="UnityEngine\U2D\Corner.cs" />
+    <Compile Include="UnityEngine\U2D\CornerSprite.cs" />
+    <Compile Include="UnityEngine\U2D\CornerType.cs" />
+    <Compile Include="UnityEngine\U2D\QualityDetail.cs" />
+    <Compile Include="UnityEngine\U2D\ShapeTangentMode.cs" />
+    <Compile Include="UnityEngine\U2D\Spline.cs" />
+    <Compile Include="UnityEngine\U2D\SplineControlPoint.cs" />
+    <Compile Include="UnityEngine\U2D\SplinePointMetaData.cs" />
+    <Compile Include="UnityEngine\U2D\SplineUtility.cs" />
+    <Compile Include="UnityEngine\U2D\SpriteShape.cs" />
+    <Compile Include="UnityEngine\U2D\SpriteShapeController.cs" />
+    <Compile Include="UnityEngine\U2D\SpriteShapeCopyUtility.cs" />
+    <Compile Include="UnityEngine\U2D\SpriteShapeGenerator.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\CombineCallback.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\ContourOrientation.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\ContourVertex.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\Dict.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\ElementType.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\Geom.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\Mesh.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\MeshUtils.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\PQHandle.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\PriorityHeap.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\PriorityQueue.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\Tess.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\Vec3.cs" />
+    <Compile Include="Unity\SpriteShape\External\LibTessDotNet\WindingRule.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

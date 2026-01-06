@@ -1,0 +1,41 @@
+﻿using System;
+using System.Configuration;
+
+namespace System.Diagnostics
+{
+	// Token: 0x02000226 RID: 550
+	[ConfigurationCollection(typeof(SwitchElement))]
+	internal class SwitchElementsCollection : ConfigurationElementCollection
+	{
+		// Token: 0x170002A1 RID: 673
+		public SwitchElement this[string name]
+		{
+			get
+			{
+				return (SwitchElement)base.BaseGet(name);
+			}
+		}
+
+		// Token: 0x170002A2 RID: 674
+		// (get) Token: 0x06001004 RID: 4100 RVA: 0x0000390E File Offset: 0x00001B0E
+		public override ConfigurationElementCollectionType CollectionType
+		{
+			get
+			{
+				return ConfigurationElementCollectionType.AddRemoveClearMap;
+			}
+		}
+
+		// Token: 0x06001005 RID: 4101 RVA: 0x00046B50 File Offset: 0x00044D50
+		protected override ConfigurationElement CreateNewElement()
+		{
+			return new SwitchElement();
+		}
+
+		// Token: 0x06001006 RID: 4102 RVA: 0x00046B57 File Offset: 0x00044D57
+		protected override object GetElementKey(ConfigurationElement element)
+		{
+			return ((SwitchElement)element).Name;
+		}
+	}
+}

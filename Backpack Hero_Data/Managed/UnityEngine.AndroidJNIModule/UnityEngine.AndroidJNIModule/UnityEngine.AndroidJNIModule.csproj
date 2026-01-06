@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9068EDF-28BE-45E3-A113-C47584949539}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityEngine</RootNamespace>
+    <AssemblyName>UnityEngine.AndroidJNIModule</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndroidJavaClass.cs" />
+    <Compile Include="AndroidJavaException.cs" />
+    <Compile Include="AndroidJavaObject.cs" />
+    <Compile Include="AndroidJavaProxy.cs" />
+    <Compile Include="AndroidJavaRunnable.cs" />
+    <Compile Include="AndroidJavaRunnableProxy.cs" />
+    <Compile Include="AndroidJNI.cs" />
+    <Compile Include="AndroidJNIHelper.cs" />
+    <Compile Include="AndroidJNISafe.cs" />
+    <Compile Include="AndroidReflection.cs" />
+    <Compile Include="Android\AndroidAssetPackError.cs" />
+    <Compile Include="Android\AndroidAssetPackInfo.cs" />
+    <Compile Include="Android\AndroidAssetPacks.cs" />
+    <Compile Include="Android\AndroidAssetPackState.cs" />
+    <Compile Include="Android\AndroidAssetPackStatus.cs" />
+    <Compile Include="Android\AndroidAssetPackUseMobileDataRequestResult.cs" />
+    <Compile Include="Android\AndroidDevice.cs" />
+    <Compile Include="Android\AndroidHardwareType.cs" />
+    <Compile Include="Android\Common.cs" />
+    <Compile Include="Android\DiagnosticsReporting.cs" />
+    <Compile Include="Android\DownloadAssetPackAsyncOperation.cs" />
+    <Compile Include="Android\GetAssetPackStateAsyncOperation.cs" />
+    <Compile Include="Android\Permission.cs" />
+    <Compile Include="Android\PermissionCallbacks.cs" />
+    <Compile Include="Android\RequestToUseMobileDataAsyncOperation.cs" />
+    <Compile Include="GlobalJavaObjectRef.cs" />
+    <Compile Include="jvalue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_AndroidJNIHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

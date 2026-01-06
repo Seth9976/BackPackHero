@@ -1,0 +1,17 @@
+﻿using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+
+[assembly: AssemblyVersion("0.0.0.0")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Core.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Flow.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Flow")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.State.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.State")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.SettingsProvider.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests")]
+[assembly: RenamedNamespace("Bolt", "Unity.VisualScripting")]
+[assembly: RenamedNamespace("Ludiq", "Unity.VisualScripting")]

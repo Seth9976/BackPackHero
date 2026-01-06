@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{684AA498-BB22-422C-B49D-BDB6774AC175}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.VisualScripting</RootNamespace>
+    <AssemblyName>Unity.VisualScripting.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.2.cs" />
+    <Compile Include="Action.cs" />
+    <Compile Include="ActionDirection.cs" />
+    <Compile Include="AdditionHandler.cs" />
+    <Compile Include="AllowsNullAttribute.cs" />
+    <Compile Include="AmbiguousOperatorException.cs" />
+    <Compile Include="AnalyticsIdentifier.cs" />
+    <Compile Include="AndHandler.cs" />
+    <Compile Include="AnimationCurveCloner.cs" />
+    <Compile Include="AnimatorMessageListener.cs" />
+    <Compile Include="AotDictionary.cs" />
+    <Compile Include="AotIncompatibleAttribute.cs" />
+    <Compile Include="AotList.cs" />
+    <Compile Include="ApplicationVariables.cs" />
+    <Compile Include="ArrayCloner.cs" />
+    <Compile Include="ArrayPool.cs" />
+    <Compile Include="AssemblyQualifiedNameParser\ParsedAssemblyQualifiedName.cs" />
+    <Compile Include="AttributeUtility.cs" />
+    <Compile Include="BinaryOperator.cs" />
+    <Compile Include="BinaryOperatorHandler.cs" />
+    <Compile Include="Cloner.cs" />
+    <Compile Include="Cloning.cs" />
+    <Compile Include="CloningContext.cs" />
+    <Compile Include="ComponentHolderProtocol.cs" />
+    <Compile Include="ConnectionCollection.cs" />
+    <Compile Include="ConnectionCollectionBase.cs" />
+    <Compile Include="ConversionUtility.cs" />
+    <Compile Include="CoroutineRunner.cs" />
+    <Compile Include="CSharpNameUtility.cs" />
+    <Compile Include="DebugDictionary.cs" />
+    <Compile Include="DebugUtility.cs" />
+    <Compile Include="DecrementHandler.cs" />
+    <Compile Include="DictionaryAsset.cs" />
+    <Compile Include="DictionaryCloner.cs" />
+    <Compile Include="DictionaryPool.cs" />
+    <Compile Include="DisableAnnotationAttribute.cs" />
+    <Compile Include="DivisionHandler.cs" />
+    <Compile Include="DoNotSerializeAttribute.cs" />
+    <Compile Include="EditorBindingUtility.cs" />
+    <Compile Include="EditorTimeBinding.cs" />
+    <Compile Include="Empty.cs" />
+    <Compile Include="EmptyEventArgs.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="EnsureThat.cs" />
+    <Compile Include="EnumerableCloner.cs" />
+    <Compile Include="EnumUtility.cs" />
+    <Compile Include="EqualityHandler.cs" />
+    <Compile Include="EventBus.cs" />
+    <Compile Include="EventHook.cs" />
+    <Compile Include="EventHookComparer.cs" />
+    <Compile Include="EventHooks.cs" />
+    <Compile Include="EventMachine.cs" />
+    <Compile Include="ExceptionMessages.cs" />
+    <Compile Include="ExceptionUtility.cs" />
+    <Compile Include="ExclusiveOrHandler.cs" />
+    <Compile Include="ExpectedTypeAttribute.cs" />
+    <Compile Include="ExtensionMethodCache.cs" />
+    <Compile Include="FakeSerializationCloner.cs" />
+    <Compile Include="FieldsCloner.cs" />
+    <Compile Include="FlexibleDictionary.cs" />
+    <Compile Include="FullSerializer\AnimationCurve_DirectConverter.cs" />
+    <Compile Include="FullSerializer\Bounds_DirectConverter.cs" />
+    <Compile Include="FullSerializer\fsAotCompilationManager.cs" />
+    <Compile Include="FullSerializer\fsArrayConverter.cs" />
+    <Compile Include="FullSerializer\fsBaseConverter.cs" />
+    <Compile Include="FullSerializer\fsConfig.cs" />
+    <Compile Include="FullSerializer\fsContext.cs" />
+    <Compile Include="FullSerializer\fsConverter.cs" />
+    <Compile Include="FullSerializer\fsConverterRegistrar.cs" />
+    <Compile Include="FullSerializer\fsData.cs" />
+    <Compile Include="FullSerializer\fsDataType.cs" />
+    <Compile Include="FullSerializer\fsDateConverter.cs" />
+    <Compile Include="FullSerializer\fsDictionaryConverter.cs" />
+    <Compile Include="FullSerializer\fsDirectConverter.2.cs" />
+    <Compile Include="FullSerializer\fsDirectConverter.cs" />
+    <Compile Include="FullSerializer\fsDuplicateVersionNameException.cs" />
+    <Compile Include="FullSerializer\fsEnumConverter.cs" />
+    <Compile Include="FullSerializer\fsForwardAttribute.cs" />
+    <Compile Include="FullSerializer\fsForwardConverter.cs" />
+    <Compile Include="FullSerializer\fsGlobalConfig.cs" />
+    <Compile Include="FullSerializer\fsGuidConverter.cs" />
+    <Compile Include="FullSerializer\fsIEnumerableConverter.cs" />
+    <Compile Include="FullSerializer\fsIgnoreAttribute.cs" />
+    <Compile Include="FullSerializer\fsISerializationCallbacks.cs" />
+    <Compile Include="FullSerializer\fsJsonParser.cs" />
+    <Compile Include="FullSerializer\fsJsonPrinter.cs" />
+    <Compile Include="FullSerializer\fsKeyValuePairConverter.cs" />
+    <Compile Include="FullSerializer\fsMemberSerialization.cs" />
+    <Compile Include="FullSerializer\fsMetaProperty.cs" />
+    <Compile Include="FullSerializer\fsMetaType.cs" />
+    <Compile Include="FullSerializer\fsMissingVersionConstructorException.cs" />
+    <Compile Include="FullSerializer\fsNullableConverter.cs" />
+    <Compile Include="FullSerializer\fsObjectAttribute.cs" />
+    <Compile Include="FullSerializer\fsObjectProcessor.cs" />
+    <Compile Include="FullSerializer\fsPrimitiveConverter.cs" />
+    <Compile Include="FullSerializer\fsPropertyAttribute.cs" />
+    <Compile Include="FullSerializer\fsReflectedConverter.cs" />
+    <Compile Include="FullSerializer\fsReflectionUtility.cs" />
+    <Compile Include="FullSerializer\fsResult.cs" />
+    <Compile Include="FullSerializer\fsSerializationCallbackProcessor.cs" />
+    <Compile Include="FullSerializer\fsSerializationCallbackReceiverProcessor.cs" />
+    <Compile Include="FullSerializer\fsSerializer.cs" />
+    <Compile Include="FullSerializer\fsTypeCache.cs" />
+    <Compile Include="FullSerializer\fsTypeConverter.cs" />
+    <Compile Include="FullSerializer\fsWeakReferenceConverter.cs" />
+    <Compile Include="FullSerializer\Gradient_DirectConverter.cs" />
+    <Compile Include="FullSerializer\GUIStyleState_DirectConverter.cs" />
+    <Compile Include="FullSerializer\GUIStyle_DirectConverter.cs" />
+    <Compile Include="FullSerializer\InputAction_DirectConverter.cs" />
+    <Compile Include="FullSerializer\Internal\Converters\UnityEvent_Converter.cs" />
+    <Compile Include="FullSerializer\Internal\fsCyclicReferenceManager.cs" />
+    <Compile Include="FullSerializer\Internal\fsOption.2.cs" />
+    <Compile Include="FullSerializer\Internal\fsOption.cs" />
+    <Compile Include="FullSerializer\Internal\fsPortableReflection.cs" />
+    <Compile Include="FullSerializer\Internal\fsTypeExtensions.cs" />
+    <Compile Include="FullSerializer\Internal\fsVersionedType.cs" />
+    <Compile Include="FullSerializer\Internal\fsVersionManager.cs" />
+    <Compile Include="FullSerializer\Keyframe_DirectConverter.cs" />
+    <Compile Include="FullSerializer\LayerMask_DirectConverter.cs" />
+    <Compile Include="FullSerializer\RectOffset_DirectConverter.cs" />
+    <Compile Include="FullSerializer\Rect_DirectConverter.cs" />
+    <Compile Include="Func.2.cs" />
+    <Compile Include="Func.cs" />
+    <Compile Include="GenericClosingException.cs" />
+    <Compile Include="GenericPool.cs" />
+    <Compile Include="GlobalMessageListener.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="GraphConnectionCollection.cs" />
+    <Compile Include="GraphData.cs" />
+    <Compile Include="GraphDebugData.cs" />
+    <Compile Include="GraphElement.cs" />
+    <Compile Include="GraphElementCollection.cs" />
+    <Compile Include="GraphGroup.cs" />
+    <Compile Include="GraphInstances.cs" />
+    <Compile Include="GraphNest.cs" />
+    <Compile Include="GraphPointer.cs" />
+    <Compile Include="GraphPointerException.cs" />
+    <Compile Include="GraphReference.cs" />
+    <Compile Include="GraphsExceptionUtility.cs" />
+    <Compile Include="GraphSource.cs" />
+    <Compile Include="GraphStack.cs" />
+    <Compile Include="GreaterThanHandler.cs" />
+    <Compile Include="GreaterThanOrEqualHandler.cs" />
+    <Compile Include="GuidCollection.cs" />
+    <Compile Include="HashSetPool.cs" />
+    <Compile Include="HashUtility.cs" />
+    <Compile Include="IAnalyticsIdentifiable.cs" />
+    <Compile Include="IAotStubbable.cs" />
+    <Compile Include="IAttributeProvider.cs" />
+    <Compile Include="ICloner.cs" />
+    <Compile Include="IConnection.cs" />
+    <Compile Include="IConnectionCollection.cs" />
+    <Compile Include="IDecoratorAttribute.cs" />
+    <Compile Include="IEventMachine.cs" />
+    <Compile Include="IGettable.cs" />
+    <Compile Include="IGizmoDrawer.cs" />
+    <Compile Include="IGraph.cs" />
+    <Compile Include="IGraphData.cs" />
+    <Compile Include="IGraphDataWithVariables.cs" />
+    <Compile Include="IGraphDebugData.cs" />
+    <Compile Include="IGraphElement.cs" />
+    <Compile Include="IGraphElementCollection.cs" />
+    <Compile Include="IGraphElementData.cs" />
+    <Compile Include="IGraphElementDebugData.cs" />
+    <Compile Include="IGraphElementWithData.cs" />
+    <Compile Include="IGraphElementWithDebugData.cs" />
+    <Compile Include="IGraphEventHandler.cs" />
+    <Compile Include="IGraphEventListener.cs" />
+    <Compile Include="IGraphEventListenerData.cs" />
+    <Compile Include="IGraphItem.cs" />
+    <Compile Include="IGraphNest.cs" />
+    <Compile Include="IGraphNester.cs" />
+    <Compile Include="IGraphNesterElement.cs" />
+    <Compile Include="IGraphParent.cs" />
+    <Compile Include="IGraphParentElement.cs" />
+    <Compile Include="IGraphRoot.cs" />
+    <Compile Include="IGraphWithVariables.cs" />
+    <Compile Include="IIdentifiable.cs" />
+    <Compile Include="IInitializable.cs" />
+    <Compile Include="IInspectableAttribute.cs" />
+    <Compile Include="IKeyedCollection.cs" />
+    <Compile Include="IMachine.cs" />
+    <Compile Include="IMacro.cs" />
+    <Compile Include="IMergedCollection.cs" />
+    <Compile Include="IncludeInSettingsAttribute.cs" />
+    <Compile Include="IncrementHandler.cs" />
+    <Compile Include="InequalityHandler.cs" />
+    <Compile Include="INotifiedCollectionItem.cs" />
+    <Compile Include="INotifyCollectionChanged.cs" />
+    <Compile Include="InspectableAttribute.cs" />
+    <Compile Include="InspectableIfAttribute.cs" />
+    <Compile Include="InspectorActionDirectionAttribute.cs" />
+    <Compile Include="InspectorAdaptiveWidthAttribute.cs" />
+    <Compile Include="InspectorDelayedAttribute.cs" />
+    <Compile Include="InspectorExpandTooltipAttribute.cs" />
+    <Compile Include="InspectorLabelAttribute.cs" />
+    <Compile Include="InspectorRangeAttribute.cs" />
+    <Compile Include="InspectorTextAreaAttribute.cs" />
+    <Compile Include="InspectorToggleLeftAttribute.cs" />
+    <Compile Include="InspectorVariableNameAttribute.cs" />
+    <Compile Include="InspectorWideAttribute.cs" />
+    <Compile Include="InspectViaImplementationsAttribute.cs" />
+    <Compile Include="InstanceActionInvoker.2.cs" />
+    <Compile Include="InstanceActionInvoker.3.cs" />
+    <Compile Include="InstanceActionInvoker.4.cs" />
+    <Compile Include="InstanceActionInvoker.5.cs" />
+    <Compile Include="InstanceActionInvoker.6.cs" />
+    <Compile Include="InstanceActionInvoker.cs" />
+    <Compile Include="InstanceActionInvokerBase.cs" />
+    <Compile Include="InstanceFieldAccessor.cs" />
+    <Compile Include="InstanceFunctionInvoker.2.cs" />
+    <Compile Include="InstanceFunctionInvoker.3.cs" />
+    <Compile Include="InstanceFunctionInvoker.4.cs" />
+    <Compile Include="InstanceFunctionInvoker.5.cs" />
+    <Compile Include="InstanceFunctionInvoker.6.cs" />
+    <Compile Include="InstanceFunctionInvoker.cs" />
+    <Compile Include="InstanceFunctionInvokerBase.cs" />
+    <Compile Include="InstanceInvokerBase.cs" />
+    <Compile Include="InstancePropertyAccessor.cs" />
+    <Compile Include="InvalidConnectionException.cs" />
+    <Compile Include="InvalidConversionException.cs" />
+    <Compile Include="InvalidImplementationException.cs" />
+    <Compile Include="InvalidOperatorException.cs" />
+    <Compile Include="InvokerBase.cs" />
+    <Compile Include="IOptimizedAccessor.cs" />
+    <Compile Include="IOptimizedInvoker.cs" />
+    <Compile Include="IPoolable.cs" />
+    <Compile Include="IPrewarmable.cs" />
+    <Compile Include="IProxyableNotifyCollectionChanged.cs" />
+    <Compile Include="ISerializationDependency.cs" />
+    <Compile Include="ISerializationDepender.cs" />
+    <Compile Include="ISerializedPropertyProvider.cs" />
+    <Compile Include="ISet.cs" />
+    <Compile Include="ISingleton.cs" />
+    <Compile Include="ISpecifiesCloner.cs" />
+    <Compile Include="IUnityObjectOwnable.cs" />
+    <Compile Include="LeftShiftHandler.cs" />
+    <Compile Include="LessThanHandler.cs" />
+    <Compile Include="LessThanOrEqualHandler.cs" />
+    <Compile Include="LinqUtility.cs" />
+    <Compile Include="ListCloner.cs" />
+    <Compile Include="ListPool.cs" />
+    <Compile Include="LogicalNegationHandler.cs" />
+    <Compile Include="LooseAssemblyName.cs" />
+    <Compile Include="LooseAssemblyNameConverter.cs" />
+    <Compile Include="LudiqBehaviour.cs" />
+    <Compile Include="LudiqScriptableObject.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="Macro.cs" />
+    <Compile Include="MacroScriptableObject.cs" />
+    <Compile Include="ManualPool.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="MemberFilter.cs" />
+    <Compile Include="MemberInfoComparer.cs" />
+    <Compile Include="MemberUtility.cs" />
+    <Compile Include="MergedCollection.cs" />
+    <Compile Include="MergedGraphElementCollection.cs" />
+    <Compile Include="MergedKeyedCollection.cs" />
+    <Compile Include="MergedList.cs" />
+    <Compile Include="MessageListener.cs" />
+    <Compile Include="ModuloHandler.cs" />
+    <Compile Include="MouseButton.cs" />
+    <Compile Include="MultiplicationHandler.cs" />
+    <Compile Include="Namespace.cs" />
+    <Compile Include="NamespaceConverter.cs" />
+    <Compile Include="NoAllocEnumerator.cs" />
+    <Compile Include="NonNullableCollection.cs" />
+    <Compile Include="NonNullableDictionary.cs" />
+    <Compile Include="NonNullableHashSet.cs" />
+    <Compile Include="NonNullableList.cs" />
+    <Compile Include="NullMeansSelfAttribute.cs" />
+    <Compile Include="NumericNegationHandler.cs" />
+    <Compile Include="ObjectVariables.cs" />
+    <Compile Include="OperatorException.cs" />
+    <Compile Include="OperatorHandler.cs" />
+    <Compile Include="OperatorUtility.cs" />
+    <Compile Include="OptimizedReflection.cs" />
+    <Compile Include="OrHandler.cs" />
+    <Compile Include="OverrideLayer.cs" />
+    <Compile Include="OverrideStack.cs" />
+    <Compile Include="PlatformUtility.cs" />
+    <Compile Include="PlusHandler.cs" />
+    <Compile Include="PredictableAttribute.cs" />
+    <Compile Include="PressState.cs" />
+    <Compile Include="ProfiledSegment.cs" />
+    <Compile Include="ProfiledSegmentCollection.cs" />
+    <Compile Include="ProfilingScope.cs" />
+    <Compile Include="ProfilingUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ray2DConverter.cs" />
+    <Compile Include="RayConverter.cs" />
+    <Compile Include="Recursion.2.cs" />
+    <Compile Include="Recursion.cs" />
+    <Compile Include="ReferenceCollector.cs" />
+    <Compile Include="ReferenceEqualityComparer.2.cs" />
+    <Compile Include="ReferenceEqualityComparer.cs" />
+    <Compile Include="ReflectedCloner.cs" />
+    <Compile Include="ReflectionFieldAccessor.cs" />
+    <Compile Include="ReflectionInvoker.cs" />
+    <Compile Include="ReflectionPropertyAccessor.cs" />
+    <Compile Include="RenamedAssemblyAttribute.cs" />
+    <Compile Include="RenamedFromAttribute.cs" />
+    <Compile Include="RenamedNamespaceAttribute.cs" />
+    <Compile Include="RequiresUnityAPIAttribute.cs" />
+    <Compile Include="RightShiftHandler.cs" />
+    <Compile Include="RuntimeCodebase.cs" />
+    <Compile Include="RuntimeVSUsageUtility.cs" />
+    <Compile Include="SavedVariables.cs" />
+    <Compile Include="SceneSingleton.cs" />
+    <Compile Include="SceneVariables.cs" />
+    <Compile Include="SerializableType.cs" />
+    <Compile Include="Serialization.cs" />
+    <Compile Include="SerializationData.cs" />
+    <Compile Include="SerializationOperation.cs" />
+    <Compile Include="SerializationVersionAttribute.cs" />
+    <Compile Include="SerializeAsAttribute.cs" />
+    <Compile Include="SerializeAttribute.cs" />
+    <Compile Include="SerializedPropertyProvider.cs" />
+    <Compile Include="SerializedPropertyProviderAttribute.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SingletonAttribute.cs" />
+    <Compile Include="StaticActionInvoker.2.cs" />
+    <Compile Include="StaticActionInvoker.3.cs" />
+    <Compile Include="StaticActionInvoker.4.cs" />
+    <Compile Include="StaticActionInvoker.5.cs" />
+    <Compile Include="StaticActionInvoker.6.cs" />
+    <Compile Include="StaticActionInvoker.cs" />
+    <Compile Include="StaticActionInvokerBase.cs" />
+    <Compile Include="StaticFieldAccessor.cs" />
+    <Compile Include="StaticFunctionInvoker.2.cs" />
+    <Compile Include="StaticFunctionInvoker.3.cs" />
+    <Compile Include="StaticFunctionInvoker.4.cs" />
+    <Compile Include="StaticFunctionInvoker.5.cs" />
+    <Compile Include="StaticFunctionInvoker.6.cs" />
+    <Compile Include="StaticFunctionInvoker.cs" />
+    <Compile Include="StaticFunctionInvokerBase.cs" />
+    <Compile Include="StaticInvokerBase.cs" />
+    <Compile Include="StaticPropertyAccessor.cs" />
+    <Compile Include="StickyNote.cs" />
+    <Compile Include="StringUtility.cs" />
+    <Compile Include="SubtractionHandler.cs" />
+    <Compile Include="TypeFilter.cs" />
+    <Compile Include="TypeIconAttribute.cs" />
+    <Compile Include="TypeIconPriorityAttribute.cs" />
+    <Compile Include="TypeName.cs" />
+    <Compile Include="TypeNameDetail.cs" />
+    <Compile Include="TypeQualifier.cs" />
+    <Compile Include="TypeSet.cs" />
+    <Compile Include="TypeSetAttribute.cs" />
+    <Compile Include="TypesMatching.cs" />
+    <Compile Include="TypeUtility.cs" />
+    <Compile Include="UnaryOperator.cs" />
+    <Compile Include="UnaryOperatorHandler.cs" />
+    <Compile Include="UnexpectedEnumValueException.cs" />
+    <Compile Include="UnityMessageListener.cs" />
+    <Compile Include="UnityObjectConverter.cs" />
+    <Compile Include="UnityObjectOwnershipUtility.cs" />
+    <Compile Include="UnityObjectUtility.cs" />
+    <Compile Include="UnityOnBecameInvisibleMessageListener.cs" />
+    <Compile Include="UnityOnBecameVisibleMessageListener.cs" />
+    <Compile Include="UnityOnBeginDragMessageListener.cs" />
+    <Compile Include="UnityOnButtonClickMessageListener.cs" />
+    <Compile Include="UnityOnCancelMessageListener.cs" />
+    <Compile Include="UnityOnCollisionEnter2DMessageListener.cs" />
+    <Compile Include="UnityOnCollisionEnterMessageListener.cs" />
+    <Compile Include="UnityOnCollisionExit2DMessageListener.cs" />
+    <Compile Include="UnityOnCollisionExitMessageListener.cs" />
+    <Compile Include="UnityOnCollisionStay2DMessageListener.cs" />
+    <Compile Include="UnityOnCollisionStayMessageListener.cs" />
+    <Compile Include="UnityOnControllerColliderHitMessageListener.cs" />
+    <Compile Include="UnityOnDeselectMessageListener.cs" />
+    <Compile Include="UnityOnDragMessageListener.cs" />
+    <Compile Include="UnityOnDropdownValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnDropMessageListener.cs" />
+    <Compile Include="UnityOnEndDragMessageListener.cs" />
+    <Compile Include="UnityOnInputFieldEndEditMessageListener.cs" />
+    <Compile Include="UnityOnInputFieldValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnJointBreak2DMessageListener.cs" />
+    <Compile Include="UnityOnJointBreakMessageListener.cs" />
+    <Compile Include="UnityOnMouseDownMessageListener.cs" />
+    <Compile Include="UnityOnMouseDragMessageListener.cs" />
+    <Compile Include="UnityOnMouseEnterMessageListener.cs" />
+    <Compile Include="UnityOnMouseExitMessageListener.cs" />
+    <Compile Include="UnityOnMouseOverMessageListener.cs" />
+    <Compile Include="UnityOnMouseUpAsButtonMessageListener.cs" />
+    <Compile Include="UnityOnMouseUpMessageListener.cs" />
+    <Compile Include="UnityOnMoveMessageListener.cs" />
+    <Compile Include="UnityOnParticleCollisionMessageListener.cs" />
+    <Compile Include="UnityOnPointerClickMessageListener.cs" />
+    <Compile Include="UnityOnPointerDownMessageListener.cs" />
+    <Compile Include="UnityOnPointerEnterMessageListener.cs" />
+    <Compile Include="UnityOnPointerExitMessageListener.cs" />
+    <Compile Include="UnityOnPointerUpMessageListener.cs" />
+    <Compile Include="UnityOnScrollbarValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnScrollMessageListener.cs" />
+    <Compile Include="UnityOnScrollRectValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnSelectMessageListener.cs" />
+    <Compile Include="UnityOnSliderValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnSubmitMessageListener.cs" />
+    <Compile Include="UnityOnToggleValueChangedMessageListener.cs" />
+    <Compile Include="UnityOnTransformChildrenChangedMessageListener.cs" />
+    <Compile Include="UnityOnTransformParentChangedMessageListener.cs" />
+    <Compile Include="UnityOnTriggerEnter2DMessageListener.cs" />
+    <Compile Include="UnityOnTriggerEnterMessageListener.cs" />
+    <Compile Include="UnityOnTriggerExit2DMessageListener.cs" />
+    <Compile Include="UnityOnTriggerExitMessageListener.cs" />
+    <Compile Include="UnityOnTriggerStay2DMessageListener.cs" />
+    <Compile Include="UnityOnTriggerStayMessageListener.cs" />
+    <Compile Include="UnityThread.cs" />
+    <Compile Include="Unknown.cs" />
+    <Compile Include="ValueAttribute.cs" />
+    <Compile Include="VariableDeclaration.cs" />
+    <Compile Include="VariableDeclarationCollection.cs" />
+    <Compile Include="VariableDeclarations.cs" />
+    <Compile Include="VariableDeclarationsCloner.cs" />
+    <Compile Include="VariableKind.cs" />
+    <Compile Include="VariableKindAttribute.cs" />
+    <Compile Include="Variables.cs" />
+    <Compile Include="VariablesAsset.cs" />
+    <Compile Include="VariablesSaver.cs" />
+    <Compile Include="VariantCollection.cs" />
+    <Compile Include="VariantKeyedCollection.cs" />
+    <Compile Include="VariantList.cs" />
+    <Compile Include="WarnBeforeEditingAttribute.cs" />
+    <Compile Include="WarnBeforeRemovingAttribute.cs" />
+    <Compile Include="WatchedList.cs" />
+    <Compile Include="XArrayPool.cs" />
+    <Compile Include="XColor.cs" />
+    <Compile Include="XComparable.cs" />
+    <Compile Include="XEventGraph.cs" />
+    <Compile Include="XGettable.cs" />
+    <Compile Include="XGraphEventListener.cs" />
+    <Compile Include="XHashSetPool.cs" />
+    <Compile Include="XListPool.cs" />
+    <Compile Include="XString.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

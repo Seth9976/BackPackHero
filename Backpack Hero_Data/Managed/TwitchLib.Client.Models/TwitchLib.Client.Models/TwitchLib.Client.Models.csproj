@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{503D0450-6BA8-4618-B2D7-47A63524EF4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLib.Client.Models</RootNamespace>
+    <AssemblyName>TwitchLib.Client.Models</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="TwitchLib.Client.Enums">
+      <HintPath>..\..\TwitchLib.Client.Enums.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announcement.cs" />
+    <Compile Include="Builders\ChannelStateBuilder.cs" />
+    <Compile Include="Builders\ChatCommandBuilder.cs" />
+    <Compile Include="Builders\ChatMessageBuilder.cs" />
+    <Compile Include="Builders\CheerBadgeBuilder.cs" />
+    <Compile Include="Builders\CommunitySubscriptionBuilder.cs" />
+    <Compile Include="Builders\ConnectionCredentialsBuilder.cs" />
+    <Compile Include="Builders\EmoteBuilder.cs" />
+    <Compile Include="Builders\ErrorEventBuilder.cs" />
+    <Compile Include="Builders\FromIrcMessageBuilderDataObject.cs" />
+    <Compile Include="Builders\GiftedSubscriptionBuilder.cs" />
+    <Compile Include="Builders\IBuilder.cs" />
+    <Compile Include="Builders\IFromIrcMessageBuilder.cs" />
+    <Compile Include="Builders\IrcMessageBuilder.cs" />
+    <Compile Include="Builders\OutboundChatMessageBuilder.cs" />
+    <Compile Include="Builders\OutboundWhisperMessageBuilder.cs" />
+    <Compile Include="Builders\OutgoingMessageBuilder.cs" />
+    <Compile Include="Builders\RaidNotificationBuilder.cs" />
+    <Compile Include="Builders\ReSubscriberBuilder.cs" />
+    <Compile Include="Builders\RitualNewChatterBuilder.cs" />
+    <Compile Include="Builders\SentMessageBuilder.cs" />
+    <Compile Include="Builders\SubscriberBaseBuilder.cs" />
+    <Compile Include="Builders\SubscriberBuilder.cs" />
+    <Compile Include="Builders\TwitchLibMessageBuilder.cs" />
+    <Compile Include="Builders\UserBanBuilder.cs" />
+    <Compile Include="Builders\UserStateBuilder.cs" />
+    <Compile Include="Builders\UserTimeoutBuilder.cs" />
+    <Compile Include="Builders\WhisperCommandBuilder.cs" />
+    <Compile Include="Builders\WhisperMessageBuilder.cs" />
+    <Compile Include="Capabilities.cs" />
+    <Compile Include="ChannelState.cs" />
+    <Compile Include="ChatCommand.cs" />
+    <Compile Include="ChatMessage.cs" />
+    <Compile Include="ChatReply.cs" />
+    <Compile Include="CheerBadge.cs" />
+    <Compile Include="Common\Helpers.cs" />
+    <Compile Include="CommunitySubscription.cs" />
+    <Compile Include="ConnectionCredentials.cs" />
+    <Compile Include="ContinuedGiftedSubscription.cs" />
+    <Compile Include="Emote.cs" />
+    <Compile Include="EmoteSet.cs" />
+    <Compile Include="ErrorEvent.cs" />
+    <Compile Include="Extensions\NetCore\ColorTranslator.cs" />
+    <Compile Include="Extractors\EmoteExtractor.cs" />
+    <Compile Include="Extractors\IExtractor.cs" />
+    <Compile Include="GiftedSubscription.cs" />
+    <Compile Include="Internal\IrcMessage.cs" />
+    <Compile Include="Internal\MsgIds.cs" />
+    <Compile Include="Internal\Tags.cs" />
+    <Compile Include="JoinedChannel.cs" />
+    <Compile Include="MessageEmote.cs" />
+    <Compile Include="MessageEmoteCollection.cs" />
+    <Compile Include="MessageState.cs" />
+    <Compile Include="OutboundChatMessage.cs" />
+    <Compile Include="OutboundWhisperMessage.cs" />
+    <Compile Include="OutgoingMessage.cs" />
+    <Compile Include="PrimePaidSubscriber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaidNotification.cs" />
+    <Compile Include="ReSubscriber.cs" />
+    <Compile Include="RitualNewChatter.cs" />
+    <Compile Include="SentMessage.cs" />
+    <Compile Include="Subscriber.cs" />
+    <Compile Include="SubscriberBase.cs" />
+    <Compile Include="TwitchLibMessage.cs" />
+    <Compile Include="UserBan.cs" />
+    <Compile Include="UserState.cs" />
+    <Compile Include="UserTimeout.cs" />
+    <Compile Include="WhisperCommand.cs" />
+    <Compile Include="WhisperMessage.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

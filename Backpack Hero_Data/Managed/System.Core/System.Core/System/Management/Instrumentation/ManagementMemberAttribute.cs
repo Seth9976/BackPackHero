@@ -1,0 +1,31 @@
+﻿using System;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Management.Instrumentation
+{
+	/// <summary>This class is used by the WMI.NET Provider Extensions framework. It is the base class for all the management attributes that can be applied to members.</summary>
+	// Token: 0x0200037B RID: 891
+	[AttributeUsage(AttributeTargets.All)]
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	public abstract class ManagementMemberAttribute : Attribute
+	{
+		/// <summary>Gets or sets the name of the management attribute.</summary>
+		/// <returns>Returns a string which is the name of the management attribute.</returns>
+		// Token: 0x170004B4 RID: 1204
+		// (get) Token: 0x06001B00 RID: 6912 RVA: 0x0005A05A File Offset: 0x0005825A
+		// (set) Token: 0x06001B01 RID: 6913 RVA: 0x0000235B File Offset: 0x0000055B
+		public string Name
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return null;
+			}
+			set
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+			}
+		}
+	}
+}

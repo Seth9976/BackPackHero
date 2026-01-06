@@ -1,0 +1,31 @@
+﻿using System;
+using System.Security.Permissions;
+using Unity;
+
+namespace System.Management.Instrumentation
+{
+	/// <summary>The ManagementBind attribute indicates that a method is used to return the instance of a WMI class associated with a specific key value.</summary>
+	// Token: 0x02000379 RID: 889
+	[AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false)]
+	[HostProtection(SecurityAction.LinkDemand, MayLeakOnAbort = true)]
+	public sealed class ManagementBindAttribute : ManagementNewInstanceAttribute
+	{
+		/// <summary>Gets or sets a value that defines the type of output that the method that is marked with the ManagementEnumerator attribute will output.</summary>
+		/// <returns>A <see cref="T:System.Type" /> value that indicates the type of output that the method marked with the <see cref="ManagementBind" /> attribute will output.</returns>
+		// Token: 0x170004B3 RID: 1203
+		// (get) Token: 0x06001AFC RID: 6908 RVA: 0x0005A05A File Offset: 0x0005825A
+		// (set) Token: 0x06001AFD RID: 6909 RVA: 0x0000235B File Offset: 0x0000055B
+		public Type Schema
+		{
+			get
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+				return null;
+			}
+			set
+			{
+				global::Unity.ThrowStub.ThrowNotSupportedException();
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE542378-AD19-42C0-9F5B-7470A2CDCABD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unity.Services.Analytics</RootNamespace>
+    <AssemblyName>Unity.Services.Analytics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\..\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcquisitionSourceParameters.cs" />
+    <Compile Include="AdCompletionStatus.cs" />
+    <Compile Include="AdImpressionParameters.cs" />
+    <Compile Include="AdPlacementType.cs" />
+    <Compile Include="AdProvider.cs" />
+    <Compile Include="AnalyticsContainer.cs" />
+    <Compile Include="AnalyticsLifetime.cs" />
+    <Compile Include="AnalyticsService.cs" />
+    <Compile Include="AnalyticsServiceInstance.cs" />
+    <Compile Include="AnalyticsServiceSystemCalls.cs" />
+    <Compile Include="ConsentCheckException.cs" />
+    <Compile Include="ConsentCheckExceptionReason.cs" />
+    <Compile Include="ContainerObject.cs" />
+    <Compile Include="CoreStatsHelper.cs" />
+    <Compile Include="Data\DataGenerator.cs" />
+    <Compile Include="Data\IDataGenerator.cs" />
+    <Compile Include="Data\StdCommonParams.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="IAnalyticsService.cs" />
+    <Compile Include="IAnalyticsServiceSystemCalls.cs" />
+    <Compile Include="ICoreStatsHelper.cs" />
+    <Compile Include="InternalNewPlayerHelper.cs" />
+    <Compile Include="Internal\AnalyticsForgetter.cs" />
+    <Compile Include="Internal\AnalyticsWebRequest.cs" />
+    <Compile Include="Internal\BufferRevoked.cs" />
+    <Compile Include="Internal\BufferSystemCalls.cs" />
+    <Compile Include="Internal\BufferX.cs" />
+    <Compile Include="Internal\Consent.cs" />
+    <Compile Include="Internal\ConsentStatus.cs" />
+    <Compile Include="Internal\ConsentTracker.cs" />
+    <Compile Include="Internal\DiskCache.cs" />
+    <Compile Include="Internal\Dispatcher.cs" />
+    <Compile Include="Internal\Event.cs" />
+    <Compile Include="Internal\EventData.cs" />
+    <Compile Include="Internal\FileSystemCalls.cs" />
+    <Compile Include="Internal\GeoAPI.cs" />
+    <Compile Include="Internal\GeoIPResponse.cs" />
+    <Compile Include="Internal\IAnalyticsForgetter.cs" />
+    <Compile Include="Internal\IBuffer.cs" />
+    <Compile Include="Internal\IBufferSystemCalls.cs" />
+    <Compile Include="Internal\IConsentTracker.cs" />
+    <Compile Include="Internal\IDiskCache.cs" />
+    <Compile Include="Internal\IDispatcher.cs" />
+    <Compile Include="Internal\IFileSystemCalls.cs" />
+    <Compile Include="Internal\IGeoAPI.cs" />
+    <Compile Include="Internal\IWebRequest.cs" />
+    <Compile Include="Internal\IWebRequestHelper.cs" />
+    <Compile Include="Internal\Locale.cs" />
+    <Compile Include="Internal\Platform\UserCountry.cs" />
+    <Compile Include="Internal\StandardEventServiceComponent.cs" />
+    <Compile Include="Internal\WebRequestHelper.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="IUnstructuredEventRecorder.cs" />
+    <Compile Include="Platform\DebugDevice.cs" />
+    <Compile Include="Platform\DeviceVolumeProvider.cs" />
+    <Compile Include="Platform\Runtime.cs" />
+    <Compile Include="Platform\UA2PlatformCode.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealCurrency.cs" />
+    <Compile Include="SdkVersion.cs" />
+    <Compile Include="TransactionCurrencyConverter.cs" />
+    <Compile Include="TransactionFailedParameters.cs" />
+    <Compile Include="TransactionParameters.cs" />
+    <Compile Include="TransactionServer.cs" />
+    <Compile Include="TransactionType.cs" />
+    <Compile Include="Ua2CoreInitializeCallback.cs" />
+    <Compile Include="VirtualCurrency.cs" />
+    <Compile Include="VirtualCurrencyType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

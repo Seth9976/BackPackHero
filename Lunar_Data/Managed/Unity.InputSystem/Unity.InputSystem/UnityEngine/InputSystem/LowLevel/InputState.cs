@@ -1,0 +1,212 @@
+﻿using System;
+using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine.InputSystem.Utilities;
+
+namespace UnityEngine.InputSystem.LowLevel
+{
+	// Token: 0x020000F2 RID: 242
+	public static class InputState
+	{
+		// Token: 0x17000418 RID: 1048
+		// (get) Token: 0x06000E25 RID: 3621 RVA: 0x00044E13 File Offset: 0x00043013
+		public static InputUpdateType currentUpdateType
+		{
+			get
+			{
+				return InputUpdate.s_LatestUpdateType;
+			}
+		}
+
+		// Token: 0x17000419 RID: 1049
+		// (get) Token: 0x06000E26 RID: 3622 RVA: 0x00044E1A File Offset: 0x0004301A
+		public static uint updateCount
+		{
+			get
+			{
+				return InputUpdate.s_UpdateStepCount;
+			}
+		}
+
+		// Token: 0x1700041A RID: 1050
+		// (get) Token: 0x06000E27 RID: 3623 RVA: 0x00044E21 File Offset: 0x00043021
+		public static double currentTime
+		{
+			get
+			{
+				return InputRuntime.s_Instance.currentTime - InputRuntime.s_CurrentTimeOffsetToRealtimeSinceStartup;
+			}
+		}
+
+		// Token: 0x14000025 RID: 37
+		// (add) Token: 0x06000E28 RID: 3624 RVA: 0x00044E33 File Offset: 0x00043033
+		// (remove) Token: 0x06000E29 RID: 3625 RVA: 0x00044E40 File Offset: 0x00043040
+		public static event Action<InputDevice, InputEventPtr> onChange
+		{
+			add
+			{
+				InputSystem.s_Manager.onDeviceStateChange += value;
+			}
+			remove
+			{
+				InputSystem.s_Manager.onDeviceStateChange -= value;
+			}
+		}
+
+		// Token: 0x06000E2A RID: 3626 RVA: 0x00044E50 File Offset: 0x00043050
+		public unsafe static void Change(InputDevice device, InputEventPtr eventPtr, InputUpdateType updateType = InputUpdateType.None)
+		{
+			if (device == null)
+			{
+				throw new ArgumentNullException("device");
+			}
+			if (!eventPtr.valid)
+			{
+				throw new ArgumentNullException("eventPtr");
+			}
+			FourCC type = eventPtr.type;
+			FourCC fourCC;
+			if (type == 1398030676)
+			{
+				fourCC = StateEvent.FromUnchecked(eventPtr)->stateFormat;
+			}
+			else
+			{
+				if (!(type == 1145852993))
+				{
+					return;
+				}
+				fourCC = DeltaStateEvent.FromUnchecked(eventPtr)->stateFormat;
+			}
+			if (fourCC != device.stateBlock.format)
+			{
+				throw new ArgumentException(string.Format("State format {0} from event does not match state format {1} of device {2}", fourCC, device.stateBlock.format, device), "eventPtr");
+			}
+			InputSystem.s_Manager.UpdateState(device, eventPtr, (updateType != InputUpdateType.None) ? updateType : InputSystem.s_Manager.defaultUpdateType);
+		}
+
+		// Token: 0x06000E2B RID: 3627 RVA: 0x00044F2F File Offset: 0x0004312F
+		public static void Change<TState>(InputControl control, TState state, InputUpdateType updateType = InputUpdateType.None, InputEventPtr eventPtr = default(InputEventPtr)) where TState : struct
+		{
+			InputState.Change<TState>(control, ref state, updateType, eventPtr);
+		}
+
+		// Token: 0x06000E2C RID: 3628 RVA: 0x00044F3C File Offset: 0x0004313C
+		public unsafe static void Change<TState>(InputControl control, ref TState state, InputUpdateType updateType = InputUpdateType.None, InputEventPtr eventPtr = default(InputEventPtr)) where TState : struct
+		{
+			if (control == null)
+			{
+				throw new ArgumentNullException("control");
+			}
+			if (control.stateBlock.bitOffset != 0U || control.stateBlock.sizeInBits % 8U != 0U)
+			{
+				throw new ArgumentException(string.Format("Cannot change state of bitfield control '{0}' using this method", control), "control");
+			}
+			InputDevice device = control.device;
+			long num = Math.Min((long)UnsafeUtility.SizeOf<TState>(), (long)((ulong)control.m_StateBlock.alignedSizeInBytes));
+			void* ptr = UnsafeUtility.AddressOf<TState>(ref state);
+			uint num2 = control.stateBlock.byteOffset - device.stateBlock.byteOffset;
+			InputSystem.s_Manager.UpdateState(device, (updateType != InputUpdateType.None) ? updateType : InputSystem.s_Manager.defaultUpdateType, ptr, num2, (uint)num, eventPtr.valid ? eventPtr.internalTime : InputRuntime.s_Instance.currentTime, eventPtr);
+		}
+
+		// Token: 0x06000E2D RID: 3629 RVA: 0x00045014 File Offset: 0x00043214
+		public static bool IsIntegerFormat(this FourCC format)
+		{
+			return format == InputStateBlock.FormatBit || format == InputStateBlock.FormatInt || format == InputStateBlock.FormatByte || format == InputStateBlock.FormatShort || format == InputStateBlock.FormatSBit || format == InputStateBlock.FormatUInt || format == InputStateBlock.FormatUShort || format == InputStateBlock.FormatLong || format == InputStateBlock.FormatULong;
+		}
+
+		// Token: 0x06000E2E RID: 3630 RVA: 0x00045098 File Offset: 0x00043298
+		public static void AddChangeMonitor(InputControl control, IInputStateChangeMonitor monitor, long monitorIndex = -1L, uint groupIndex = 0U)
+		{
+			if (control == null)
+			{
+				throw new ArgumentNullException("control");
+			}
+			if (monitor == null)
+			{
+				throw new ArgumentNullException("monitor");
+			}
+			if (!control.device.added)
+			{
+				throw new ArgumentException(string.Format("Device for control '{0}' has not been added to system", control));
+			}
+			InputSystem.s_Manager.AddStateChangeMonitor(control, monitor, monitorIndex, groupIndex);
+		}
+
+		// Token: 0x06000E2F RID: 3631 RVA: 0x000450F0 File Offset: 0x000432F0
+		public static IInputStateChangeMonitor AddChangeMonitor(InputControl control, Action<InputControl, double, InputEventPtr, long> valueChangeCallback, int monitorIndex = -1, Action<InputControl, double, long, int> timerExpiredCallback = null)
+		{
+			if (valueChangeCallback == null)
+			{
+				throw new ArgumentNullException("valueChangeCallback");
+			}
+			InputState.StateChangeMonitorDelegate stateChangeMonitorDelegate = new InputState.StateChangeMonitorDelegate
+			{
+				valueChangeCallback = valueChangeCallback,
+				timerExpiredCallback = timerExpiredCallback
+			};
+			InputState.AddChangeMonitor(control, stateChangeMonitorDelegate, (long)monitorIndex, 0U);
+			return stateChangeMonitorDelegate;
+		}
+
+		// Token: 0x06000E30 RID: 3632 RVA: 0x0004512A File Offset: 0x0004332A
+		public static void RemoveChangeMonitor(InputControl control, IInputStateChangeMonitor monitor, long monitorIndex = -1L)
+		{
+			if (control == null)
+			{
+				throw new ArgumentNullException("control");
+			}
+			if (monitor == null)
+			{
+				throw new ArgumentNullException("monitor");
+			}
+			InputSystem.s_Manager.RemoveStateChangeMonitor(control, monitor, monitorIndex);
+		}
+
+		// Token: 0x06000E31 RID: 3633 RVA: 0x00045155 File Offset: 0x00043355
+		public static void AddChangeMonitorTimeout(InputControl control, IInputStateChangeMonitor monitor, double time, long monitorIndex = -1L, int timerIndex = -1)
+		{
+			if (monitor == null)
+			{
+				throw new ArgumentNullException("monitor");
+			}
+			InputSystem.s_Manager.AddStateChangeMonitorTimeout(control, monitor, time, monitorIndex, timerIndex);
+		}
+
+		// Token: 0x06000E32 RID: 3634 RVA: 0x00045175 File Offset: 0x00043375
+		public static void RemoveChangeMonitorTimeout(IInputStateChangeMonitor monitor, long monitorIndex = -1L, int timerIndex = -1)
+		{
+			if (monitor == null)
+			{
+				throw new ArgumentNullException("monitor");
+			}
+			InputSystem.s_Manager.RemoveStateChangeMonitorTimeout(monitor, monitorIndex, timerIndex);
+		}
+
+		// Token: 0x02000216 RID: 534
+		private class StateChangeMonitorDelegate : IInputStateChangeMonitor
+		{
+			// Token: 0x060014AA RID: 5290 RVA: 0x0005FD00 File Offset: 0x0005DF00
+			public void NotifyControlStateChanged(InputControl control, double time, InputEventPtr eventPtr, long monitorIndex)
+			{
+				this.valueChangeCallback(control, time, eventPtr, monitorIndex);
+			}
+
+			// Token: 0x060014AB RID: 5291 RVA: 0x0005FD12 File Offset: 0x0005DF12
+			public void NotifyTimerExpired(InputControl control, double time, long monitorIndex, int timerIndex)
+			{
+				Action<InputControl, double, long, int> action = this.timerExpiredCallback;
+				if (action == null)
+				{
+					return;
+				}
+				action(control, time, monitorIndex, timerIndex);
+			}
+
+			// Token: 0x04000B4B RID: 2891
+			public Action<InputControl, double, InputEventPtr, long> valueChangeCallback;
+
+			// Token: 0x04000B4C RID: 2892
+			public Action<InputControl, double, long, int> timerExpiredCallback;
+		}
+	}
+}
